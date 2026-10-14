@@ -1,33 +1,53 @@
-# 📷 JPG-RAW_OrphanCleaner
+# JPG-RAW Pair Cleaner
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-brightgreen)](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner)
-[![Latest Release](https://img.shields.io/github/v/release/KILLSTARSX/JPG-RAW_OrphanCleaner)](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)
-[![Size](https://img.shields.io/badge/size-11.6%20MB-brightgreen)](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/KILLSTARSX/Jpg-Raw-Pair-Cleaner)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/KILLSTARSX/Jpg-Raw-Pair-Cleaner/total)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
+[![Size](https://img.shields.io/badge/size-11.6%20MB-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
+[![Stars](https://img.shields.io/github/stars/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/stargazers)
 
-> **一张照片的内存大小，装下了一整套智能照片管理工具。轻，却前所未有的强。**  
-> **The size of a single photo, yet a full-featured smart photo manager. Small, but ridiculously powerful.**
+### ⬇️ [下载 Windows 版 / Download for Windows](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest) · 11.6 MB · 免安装 / portable · Windows 10 / 11
 
-> 自动清理 JPG + RAW 双格式中的孤立文件，支持 15+ 相机品牌、10 种语言、深浅色主题，移入回收站可恢复。  
-> Automatically find and delete orphaned JPG/RAW files, supports 15+ camera brands, 10 languages, dark/light themes, moves to Recycle Bin.
+**有 JPG 没 RAW、有 RAW 没 JPG？这个工具把它们找出来，确认后移入回收站（可恢复）。**
+**Find JPG files whose RAW is gone — and RAW files whose JPG is gone — review them side by side, then clean them up safely.**
+
+A tiny, portable Windows tool for photographers who shoot RAW+JPG: it pairs files by base name, lists exactly what is left over, and moves only what you confirm to the **Windows Recycle Bin** — never a permanent delete.
+
+> **Keywords**: delete jpg without raw · remove orphan raw files · orphaned jpg · orphaned raw · jpg raw pair · photo culling leftovers · camera raw cleanup · photo library cleanup · 相机照片筛选 · JPG RAW 配对 · 孤立文件清理
 
 ---
 
 ## 📖 目录 / Table of Contents
 
+- [什么算“孤立文件” / What is an orphan file](#what-is-an-orphan-file)
 - [功能亮点 / Features](#功能亮点)
 - [快速开始 / Quick Start](#快速开始)
-- [支持的相机品牌与 RAW 格式 / Supported Camera Brands & RAW Formats](#支持的相机品牌与-raw-格式)
-- [性能测试数据 / Performance Test Data](#性能测试数据)
-- [安全说明 / Safety Notes](#安全说明)
+- [界面预览 / Screenshots](#界面预览)
+- [支持的相机品牌与 RAW 格式](#支持的相机品牌与-raw-格式)
+- [性能测试数据 / Performance](#性能测试数据)
+- [安全说明 / Safety](#安全说明)
+- [常见问题 / FAQ](#常见问题)
 - [更新日志 / Changelog](#更新日志)
 - [作者 / Author](#作者)
 
 ---
 
-<img width="1437" height="1353" alt="image" src="https://github.com/user-attachments/assets/6872ee45-132b-431d-b612-24e041bc0896" />
-<img width="1437" height="1353" alt="image" src="https://github.com/user-attachments/assets/a284dd2a-06b3-433e-aeb8-f7cd4ed9a230" />
+## <a id="what-is-an-orphan-file"></a> 🤔 什么算“孤立文件”？ / What is an orphan file?
 
+同一张照片通常会存成一对文件：IMG_0001.JPG + IMG_0001.CR3。删掉其中一侧（相机里挑片、只导入了一半、以前手工清理过）之后，另一侧就成了**孤立文件**。
+
+| 情况 | 结果 | 本工具的处理 |
+| :--- | :--- | :--- |
+| 有 JPG，没有 RAW | 孤立 JPG | 列出来，确认后移入回收站 |
+| 有 RAW，没有 JPG | 孤立 RAW | 列出来，确认后移入回收站 |
+| 两侧都在 | 正常配对 | 不会被选中，不会被删除 |
+
+扫描文件夹（可递归子文件夹），按**基础名**配对，只把“多出来的那一半”列给你确认。
+
+One photo usually exists as a pair — IMG_0001.JPG + IMG_0001.CR3. Delete one side (in-camera culling, a half-finished import, a past manual cleanup) and the other becomes an **orphan file**. JPG-RAW Pair Cleaner scans a folder (recursively if you want), pairs files by base name, lists exactly what is left over, and cleans only what you confirm.
+
+---
 
 ## <a id="功能亮点"></a> ✨ 功能亮点 / Features
 
@@ -44,7 +64,7 @@
 | 🖼️ **缩略图预览**：JPG 显示缩略图，RAW 显示后缀占位框，三档大小可调 | 🖼️ **Thumbnail Preview**：JPG shows thumbnails, RAW shows suffix placeholders, 3 size presets |
 | 📷 **EXIF 信息显示**：单击查看 EXIF，支持简略 / 详细模式切换与一键复制 | 📷 **EXIF Display**：Click to view EXIF, compact/detailed mode toggle with one-click copy |
 | 🗑️ **安全删除**：所有文件移入 Windows 回收站，可恢复 | 🗑️ **Safe Deletion**：All files moved to Windows Recycle Bin, fully recoverable |
-| 🛡️ **防误触确认**：自绘确认窗口，无"×"关闭按钮，默认焦点在"取消"上 | 🛡️ **Mis-touch Protection**：Custom dialog with no "×" button, focus defaults to "Cancel" |
+| 🛡️ **防误触确认**：自绘确认窗口，无“×”关闭按钮，默认焦点在“取消”上 | 🛡️ **Mis-touch Protection**：Custom dialog with no “×” button, focus defaults to “Cancel” |
 | ⚡ **多核并行**：扫描与缩略图生成利用多核 CPU，流畅不卡顿 | ⚡ **Multi-core Parallel**：Scanning & thumbnail generation utilize multi-core CPU |
 | ⚙️ **配置记忆**：自动记住文件夹、格式、主题、语言、界面模式、勾选状态等设置 | ⚙️ **Settings Memory**：Remembers folder, format, theme, language, UI mode, checkbox states, etc. |
 
@@ -52,30 +72,38 @@
 
 ## <a id="快速开始"></a> 🚀 快速开始 / Quick Start
 
-### 下载安装 / Download & Install
+### 1. 下载安装 / Download & Install
 
 | 步骤 | 中文 | English |
 | :--- | :--- | :--- |
-| ① | 前往 **[Releases 页面](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)** 下载最新版本 | Go to **[Releases page](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)** to download the latest version |
-| ② | 双击运行，无需安装任何额外软件（适用于 Windows 10 / 11） | Double-click to run – no additional software required (Windows 10 / 11) |
+| ① | 前往 **[Releases 页面](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)** 下载最新版本（适用于 Windows 10 / 11） | Download the latest build from the **[Releases page](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)** (Windows 10 / 11) |
+| ② | 双击运行，无需安装任何额外软件 | Double-click to run – no installer and no runtime required |
 
-### 三步上手 / Three Steps
+> ⚠️ 本程序未购买代码签名证书，首次运行 Windows SmartScreen 可能提示“Windows 已保护你的电脑”：点击 **更多信息 → 仍要运行** 即可。发布页给出 SHA256 可自行校验，源码全部公开，也可以自己打包（见下方 FAQ）。
+
+### 2. 三步上手 / Three Steps
 
 | 步骤 | 中文 | English |
 | :--- | :--- | :--- |
-| ① | 点击"浏览…"选择照片文件夹 → 自动开始扫描 | Click "Browse…" to select folder → scanning starts automatically |
+| ① | 点击“浏览…”选择照片文件夹 → 自动开始扫描 | Click “Browse…” to select folder → scanning starts automatically |
 | ② | 在孤立文件列表或对比界面中检查要删除的文件（不需要删的取消勾选） | Review files in the orphan list or comparison view (uncheck any you want to keep) |
-| ③ | 点击"删除"→ 在确认窗口中点圆形"删除"按钮 → 完成 | Click "Delete" → click the round "Delete" button in the dialog → done |
+| ③ | 点击“删除”→ 在确认窗口中点圆形“删除”按钮 → 完成 | Click “Delete” → click the round “Delete” button in the dialog → done |
 
-> 📖 详细使用说明请参考压缩包内的 `使用说明书.txt` / For detailed instructions, see `使用说明书.txt` in the package.
+> 📖 详细使用说明见 [User_Manual.txt](User_Manual.txt) / [使用说明书.txt](使用说明书.txt)。 / For detailed instructions, see [User_Manual.txt](User_Manual.txt) or [使用说明书.txt](使用说明书.txt).
+
+---
+
+## <a id="界面预览"></a> 🖼️ 界面预览 / Screenshots
+
+<img width="1437" height="1353" alt="JPG-RAW Pair Cleaner 界面 / UI" src="https://github.com/user-attachments/assets/6872ee45-132b-431d-b612-24e041bc0896" />
 
 ---
 
 ## <a id="支持的相机品牌与-raw-格式"></a> 📸 支持的相机品牌与 RAW 格式 / Supported Camera Brands & RAW Formats
 
-内置 15 个品牌，品牌名随界面语言本地化显示（如简体中文显示 `松下 Panasonic`，英文显示 `Panasonic`，日文显示 `パナソニック Panasonic`）。
+内置 15 个品牌，品牌名随界面语言本地化显示（如简体中文显示“松下 Panasonic”，英文显示“Panasonic”，日文显示“パナソニック Panasonic”）。
 
-15 built-in brands with localized display names per UI language (e.g. `松下 Panasonic` in Simplified Chinese, `Panasonic` in English, `パナソニック Panasonic` in Japanese).
+15 built-in brands with localized display names per UI language (e.g. “松下 Panasonic” in Simplified Chinese, “Panasonic” in English, “パナソニック Panasonic” in Japanese).
 
 | 品牌 / Brand | RAW 后缀 / RAW Suffix(es) |
 | :--- | :--- |
@@ -121,9 +149,23 @@ The following data was measured under extreme performance scenarios. **All tests
 | :--- | :--- |
 | 所有删除操作均移入 **Windows 回收站**，可从回收站还原 | All deletions go to **Windows Recycle Bin** – restorable at any time |
 | **不存在任何永久删除调用**，绝不永久删除文件 | **No permanent deletion calls** – files are never permanently deleted |
-| 格式不符时强制二次确认，即使取消勾选也不会跳过 | Force re‑confirmation on format mismatch, even if checkbox is unchecked |
-| 单个文件失败不中断流程，失败原因明确列出；文件被占用时自动等待后重试一次 | Individual file failure won't interrupt the process; reasons are clearly listed; auto-retry once if file is in use |
-| 删除前确认窗口无"×"按钮，默认焦点在"取消"，按 Esc / 回车均为取消 | Confirmation dialog has no "×" button, focus defaults to "Cancel", Esc/Enter both cancel |
+| 格式不符时强制二次确认，即使取消勾选也不会跳过 | Force re-confirmation on format mismatch, even if checkbox is unchecked |
+| 单个文件失败不中断流程，失败原因明确列出；文件被占用时自动等待后重试一次 | Individual file failure won’t interrupt the process; reasons are clearly listed; auto-retry once if file is in use |
+| 删除前确认窗口无“×”按钮，默认焦点在“取消”，按 Esc / 回车均为取消 | Confirmation dialog has no “×” button, focus defaults to “Cancel”, Esc/Enter both cancel |
+
+---
+
+## <a id="常见问题"></a> ❓ 常见问题 / FAQ
+
+| 问题 / Question | 回答 / Answer |
+| :--- | :--- |
+| **Windows 提示“已保护你的电脑”怎么办？ / SmartScreen warning?** | 程序没有购买代码签名证书（个人开源项目通常不买），点击 **更多信息 → 仍要运行** 即可。可先核对 Release 页面给出的 SHA256，源码完全公开，也可以自己重新打包。 |
+| **会永久删除我的照片吗？ / Is deletion permanent?** | 不会。所有删除都走 Windows 回收站，随时可以还原；程序中没有永久删除的调用。 |
+| **会动到已经配好对的文件吗？ / Will it touch matched pairs?** | 不会。默认只处理孤立文件；对比界面中已配对的行不可勾选。 |
+| **支持哪些格式？ / Which formats are supported?** | JPG/JPEG，以及上表 15 个相机品牌的 RAW（RW2、CR3、CR2、NEF、ARW、RAF、ORF、DNG 等）。 |
+| **支持 macOS / Linux 吗？ / Other platforms?** | 目前仅提供 Windows 10 / 11 版本。 |
+| **怎么切换语言？ / How to change language?** | 应用栏右侧的语言下拉框可切换 10 种语言，首次启动按系统语言自动选择，选择会被记住。 |
+| **发现问题怎么反馈？ / How to report a bug?** | 直接开一个 [Issue](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/issues)，附上版本号、语言和截图即可。 |
 
 ---
 
@@ -142,14 +184,14 @@ The following data was measured under extreme performance scenarios. **All tests
 **v5.0** — 🌍 全球化 + 🎨 主题系统 + ☑️ 勾选选择
 - **新增**：10 种语言支持（English / 简体中文 / 繁體中文 / 日本語 / 한국어 / Français / Deutsch / Español / Русский / Português）
 - **新增**：首次启动自动检测系统语言（Windows UI 语言 / 环境变量回退）
-- **新增**：相机品牌名本地化（如简体中文 `松下 Panasonic`、日文 `パナソニック Panasonic`、俄文 `Никон Nikon`）
+- **新增**：相机品牌名本地化（如简体中文“松下 Panasonic”、日文“パナソニック Panasonic”、俄文“Никон Nikon”）
 - **新增**：深色 / 浅色主题，默认跟随系统，一键切换实时生效
 - **新增**：列表与预览勾选选择（列表勾选框 / 缩略图角标 / 空格键三种方式）
 - **新增**：勾选状态记忆，删除数量与总大小只统计仍被勾选的文件
 - **新增**：列表 ↔ 预览双向联动定位（单击列表行滚动到缩略图，单击缩略图定位列表行）
 - **新增**：自绘圆润滚动条（长方形 + 两端半圆，非椭圆），列表 / 预览 / 结果区样式统一
 - **新增**：自绘药丸形按钮、下拉框、滑块、卡片
-- **新增**：二次确认防误触弹窗（无"×"按钮，圆形取消 / 删除按钮，默认焦点在取消）
+- **新增**：二次确认防误触弹窗（无“×”按钮，圆形取消 / 删除按钮，默认焦点在取消）
 - **修复**：EXIF 信息独占一行右对齐，与按钮永不重叠（窄窗口下也能完整显示）
 - **修复**：列表水平滚动（长路径超出宽度时可正常滚动）
 - **优化**：软件体积从 16.2 MB 进一步缩减至 **11.6 MB**
@@ -168,7 +210,7 @@ The following data was measured under extreme performance scenarios. **All tests
 - **新增**：单击缩略图/列表行显示 EXIF
 - **新增**：双击缩略图跳转资源管理器定位文件
 - **新增**：预览区滚动自动回到顶部（切换文件夹后）
-- **修复**：RAW 文件 EXIF 解析（内嵌 TIFF 解析，缺失字段显示 "--"）
+- **修复**：RAW 文件 EXIF 解析（内嵌 TIFF 解析，缺失字段显示 “--”）
 - **优化**：缩略图缓存、多核并行处理，提升扫描与加载速度
 - **优化**：软件体积缩减 40%（26.7 MB → 16.2 MB）
 
@@ -224,12 +266,12 @@ The following data was measured under extreme performance scenarios. **All tests
 
 ## 📄 许可证 / License
 
-本项目采用 **MIT License** 开源协议，完全免费开源。  
-This project is licensed under the **MIT License** – completely free and open source.
+本项目采用 **MIT License** 开源协议，完全免费开源，完整文本见 [LICENSE](LICENSE)。
+This project is licensed under the **MIT License** – completely free and open source, see [LICENSE](LICENSE).
 
 ---
 
-## ⭐ 如果觉得有用，欢迎点个 Star！
+## ⭐ 如果觉得有用，欢迎点个 Star！ / If it helped, a star is appreciated!
 
-[![Star History](https://img.shields.io/github/stars/KILLSTARSX/JPG-RAW_OrphanCleaner?style=social)](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/stargazers)
-[![Fork](https://img.shields.io/github/forks/KILLSTARSX/JPG-RAW_OrphanCleaner?style=social)](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/forks)
+[![Star History](https://img.shields.io/github/stars/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/stargazers)
+[![Fork](https://img.shields.io/github/forks/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/forks)
