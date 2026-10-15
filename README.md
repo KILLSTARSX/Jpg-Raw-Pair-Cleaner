@@ -7,14 +7,24 @@
 [![Size](https://img.shields.io/badge/size-11.6%20MB-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
 [![Stars](https://img.shields.io/github/stars/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/stargazers)
 
-### ⬇️ [下载 Windows 版 / Download for Windows](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest) · 11.6 MB · 免安装 / portable · Windows 10 / 11
 
-**有 JPG 没 RAW、有 RAW 没 JPG？这个工具把它们找出来，确认后移入回收站（可恢复）。**
-**Find JPG files whose RAW is gone — and RAW files whose JPG is gone — review them side by side, then clean them up safely.**
+JPG without RAW? RAW without JPG?  
+This **11.6 MB** tool is built for exactly that — the “half photo” left behind.  
+It pairs by base name, lists every orphan, and shows missing sides side by side.  
+Confirmed files go to the **Windows Recycle Bin** — recoverable, never permanently deleted.  
+Small enough to fit on an SD card. Plug it into any Windows PC, double-click, and go.  
+Supports 15+ camera brands, 10 languages, dark/light themes.
 
-A tiny, portable Windows tool for photographers who shoot RAW+JPG: it pairs files by base name, lists exactly what is left over, and moves only what you confirm to the **Windows Recycle Bin** — never a permanent delete.
 
-> **Keywords**: delete jpg without raw · remove orphan raw files · orphaned jpg · orphaned raw · jpg raw pair · photo culling leftovers · camera raw cleanup · photo library cleanup · 相机照片筛选 · JPG RAW 配对 · 孤立文件清理
+有 JPG，没 RAW？有 RAW，没 JPG？  
+这个 **11.6 MB** 的小工具，专治这种“半张照片”。  
+按基础名自动配对，孤立文件左右对比，一眼看清缺哪边。  
+确认后移入 **Windows 回收站**，可恢复，不永久删除。  
+轻到能塞进 SD 卡，插到任何 Windows 电脑，双击就能用。  
+支持 15+ 相机品牌、10 种语言、深浅主题。
+
+
+> **Keywords**: orphaned jpg · orphaned raw · jpg raw pair · camera raw cleanup · photo culling leftovers · 孤立文件清理 · JPG RAW 配对
 
 ---
 
