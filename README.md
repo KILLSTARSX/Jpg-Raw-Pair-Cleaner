@@ -147,7 +147,6 @@ The following data was measured under extreme performance scenarios. **All tests
 | 勾选 / Checkbox selection | ✅ 1000 次勾选 1.3s / 1000 checks in 1.3s |
 | 联动 / List-preview sync | ✅ 66ms |
 | 2000 文件性能 / 2000-file performance | ✅ 扫描 11.7s，1200 缩略图 / Scan 11.7s, 1200 thumbnails |
-| v5.1 对比界面 / v5.1 Comparison UI | ✅ 49 项全部通过 / All 49 tests passed |
 
 <small>此数据基于极限性能场景，具体性能差异因用户电脑配置不同而异。 / This data is based on extreme performance scenarios; actual performance may vary depending on your computer configuration.</small>
 
