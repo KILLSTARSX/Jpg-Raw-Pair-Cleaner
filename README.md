@@ -159,9 +159,6 @@ This data is based on extreme performance scenarios; actual performance may vary
 ## <a id="changelog"></a> 📝 Changelog
 
 **v6.0** — Native C++ Rewrite + RAW Thumbnail Preview
-
-Rewritten entirely in C++17 + Win32 API. No Python, no Qt, no .NET, no third-party libraries. Single exe, ready to run.
-
 - New: RAW embedded thumbnail preview (parses embedded JPG previews from six major camera brands)
 - New: Synchronized deletion of JPG and RAW files (auto-pairs by base name; matched files never touched)
 - Rewrite: Native C++17 + Win32 API, no Python / Qt / .NET / any third-party library
