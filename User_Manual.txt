@@ -1,6 +1,6 @@
 ══════════════════════════════════════════════════
         JPG-RAW_OrphanCleaner - User Manual
-        (v5.1 · Author: KILL-STAR SX)
+        (v6.0 · Author: KILL-STAR SX)
 ══════════════════════════════════════════════════
 
 【Copyright】
@@ -18,8 +18,11 @@ the Recycle Bin, so there is no risk of losing them.
 
 【Requirements】
   · Windows 10 / 11. The exe runs directly - no installation needed.
-  · Source version requires Python 3.10+ with Pillow.
-  · Single-file exe is about 11.6 MB - low resource usage, fast startup.
+  · v6.0 is a native C++/Win32 program: zero runtime dependencies, a single
+    exe of only ~620 KB, instant startup, and full high-DPI scaling support.
+  · Rebuilding from source: run build.ps1 inside the cpp\ folder (a w64devkit
+    compiler is bundled - no dev environment needed). The legacy Python source
+    is still included and needs Python 3.10+ with Pillow.
 
 【Quick start (3 steps)】
   1. Click "Browse..." and pick a photo folder - scanning starts automatically.
@@ -66,7 +69,7 @@ the Recycle Bin, so there is no risk of losing them.
     Checkboxes, delete counts, EXIF, preview linkage, reveal-in-Explorer and
     select-all behave identically in both interfaces.
 
-【Interface】(v5.0 modern rounded-card layout with light/dark theme)
+【Interface】(v6.0 modern rounded-card layout, light/dark theme, DPI scaling)
   Top bar: app name on the left; theme, language switch and "About" on the right.
   · Theme: the button shows the CURRENT theme (Light / Dark); clicking switches
     to the other one. Default follows the system. All buttons, drop-downs, cards,
@@ -80,13 +83,27 @@ the Recycle Bin, so there is no risk of losing them.
     or Traditional); afterwards your own choice is remembered. The label shows
     "Language" in Chinese UI and "语言" otherwise, so users of any language can
     find it. Switching applies instantly - no restart needed.
-  ① Target folder: input box + "Browse..." button. Browsing starts scanning
-     automatically.
-  ② RAW format ("Camera Brand" dropdown):
+  ① Target folder: rounded input box + "Browse..." button. Browsing starts
+     scanning automatically.
+  ② RAW format ("Camera Brand" dropdown, label on the same row):
      - Auto-detect (default): the app detects the RAW formats actually present
-       in the folder. Easiest option.
-     - Pick a brand: the matching suffixes are filled in (e.g. Sony -> .ARW).
-     - Custom: type suffixes separated by commas, e.g. .rw2,.dng.
+       in the folder. Easiest option. After a scan the suffix box shows the
+       suffixes it actually FOUND (e.g. .RW2 .NEF), so you can confirm at a
+       glance that the right formats were picked up.
+     - Pick a brand: the suffix box fills in that brand's suffixes
+       (e.g. Sony -> .ARW .SR2 .SRF).
+     - Custom: choose this to specify formats yourself. Type suffixes in the
+       box, separated by commas (semicolons or spaces work too), e.g. .rw2,.dng;
+       the leading dot is optional (rw2 works as well). If you leave it empty
+       and click Scan, every known RAW suffix is used and the status bar says so.
+     - When you can type in the box (v6.0): only in "Custom" mode - then the
+       box has a brighter background and clear text. With Auto-detect or a
+       brand selected the background darkens and the text greys out: the box
+       is for SHOWING suffixes only (what auto-detect found, or the brand's
+       list), not for typing. The old "RAW suffix cannot be empty" popup is gone.
+     - Switching modes (v6.0): once a folder has been scanned, switching to
+       Auto-detect or another brand re-scans immediately and refreshes the
+       suffix box and the list; "Custom" waits until you type and click Scan.
      - Protection: if the selected format does not match what is actually in
        the folder, the status bar warns you and those RAW files are NOT listed
        as orphans (prevents accidental deletion).
@@ -152,7 +169,10 @@ the Recycle Bin, so there is no risk of losing them.
   ⑩ Result area: log of scans and deletions (success/failure counts and
      failure reasons).
   ⑪ About: version, author, changelog and the "completely free and open
-     source" statement (follows the UI language).
+     source" statement (follows the UI language). The window sizes itself to
+     its content and scrolls when the changelog is long; close it with the
+     "×" in the title bar or with Esc / Enter - you are right back in the
+     main window.
 
 【Confirmation window (misclick-safe)】
   · The confirm window has no system title bar, therefore NO "×" close button;
@@ -220,47 +240,25 @@ Built-in brands (extensions in brackets):
      the Delete button update, and the state is remembered.
   8. The UI is too bright/dark?
      Use the "Theme" button in the top bar (default follows the system).
-
-【Why does Windows protected your PC sometimes appear?】(no certificate needed)
-  That is the normal SmartScreen reputation check for unsigned programs the system
-  has never seen. It appears most often when the file was downloaded from the
-  internet (browsers tag downloads with a Mark of the Web), or when the program is
-  a brand-new build with no reputation yet.
-  Any of these removes the prompt - none requires installing a certificate:
-    1) Run the bundled unblock helper, or right-click the exe -> Properties ->
-       tick Unblock -> OK;
-    2) When sharing, send this single exe; the recipient clicks Run anyway once,
-       or imports the bundled 证书\KILL-STAR SX Root CA.cer to skip the prompt;
-    3) Copy via USB drive / LAN share - such files carry no Mark of the Web;
-    4) On your own PC only: Windows Security -> App and browser control ->
-       Reputation-based protection -> turn Check apps and files off.
+  9. The suffix box is grey and won't let me type?
+     That is by design: the box is editable only in "Custom" mode. With
+     Auto-detect or a brand selected it just DISPLAYS the suffixes and cannot
+     be edited. Switch to "Custom" to type your own.
 
 【Troubleshooting: the app does not start】
-  · Blue "Windows protected your PC / SmartScreen" prompt: this is the normal
-    warning for unsigned software (this app is free and open source, without a
-    paid code-signing certificate). Click "More info" -> "Run anyway".
-  · "Error: Could not create temporary directory!": the single-file build could
-    not unpack itself (on a few machines %TEMP% is restricted by security
-    software or policy). Fix it in any of these ways:
-      1) Move the single-file exe to a writable folder (Desktop, Documents, USB);
-      2) Delete the leftover _MEI* folders in
-         C:\Users\<you>\AppData\Local\Temp and try again;
-      3) Worst case, rebuild a no-unpack folder build with: build.bat onedir
-  · Rebuilding: run build.bat (single file) or build.bat onedir (folder build).
+  · The program is code-signed, so normally a plain double-click starts it.
+  · If your PC still shows a Windows security prompt, click "More info" ->
+    "Run anyway" - it does not affect usage and does not mean anything is wrong.
 
-【Changelog】(major features only)
-  v5.1  Optional pair-comparison view (JPG | RAW side by side, missing side
-        highlighted by row colour), reusable interface switching
-  v5.0  10 languages with system-language auto-detect, localized camera
-        brands, dark/light themes, checkbox selection in list and preview,
-        list-preview linked navigation, custom rounded scrollbars,
-        misclick-safe confirmation
-  v4.1  Modern card UI, lighter build
-  v4.0  Recycle-bin delete (restorable), 9-field EXIF, EXIF copy
-  v3.6  Fixed status bar, proportional cards, lazy + RAW EXIF
-  v3.5  EXIF display, thumbnail cache and parallel decoding
-  v3.0  Auto-detect, mismatch protection, settings memory
-  v2.0  Multiple RAW formats, recursive scanning
-  v1.0  RAW and JPG filtering/deletion
+【Changelog】(current version highlights only; earlier versions are listed
+in the About window)
+  v6.0 highlights:
+  · Native C++/Win32 rewrite: custom-drawn rounded-card UI, light/dark themes,
+    DPI scaling, a single ~620 KB exe with no runtime deps, instant startup;
+  · RAW suffix box reworked: "Custom" lets you type suffixes, Auto-detect /
+    brand modes show them read-only (what was found / the brand's list),
+    a locked box gets a darker background with grey text, and switching
+    modes re-scans immediately;
+  · Clicking a list row scrolls the preview to that photo and highlights it.
 
 ══════════════════════════════════════════════════
