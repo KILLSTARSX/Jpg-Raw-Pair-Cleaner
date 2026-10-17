@@ -85,7 +85,8 @@
 
 ## <a id="screenshots"></a> 🖼️ 界面预览
 
-<img width="1437" height="1353" alt="JPG-RAW Pair Cleaner UI" src="https://github.com/user-attachments/assets/6872ee45-132b-431d-b612-24e041bc0896" />
+<img width="1390" height="1609" alt="image" src="https://github.com/user-attachments/assets/82ccc61e-86a8-4bd2-baf5-7b2d1b531018" />
+
 
 ---
 
