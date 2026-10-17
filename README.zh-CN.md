@@ -6,12 +6,12 @@
 [![Latest release](https://img.shields.io/github/v/release/KILLSTARSX/Jpg-Raw-Pair-Cleaner)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/KILLSTARSX/Jpg-Raw-Pair-Cleaner/total)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
-[![Size](https://img.shields.io/badge/size-613%20KB-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
+[![Size](https://img.shields.io/badge/size-623%20KB-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
 [![Stars](https://img.shields.io/github/stars/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/stargazers)
 
-自动清理 JPG+RAW 孤立文件，筛选并同步删除 JPG/RAW 照片。软件仅 613 KB，支持 15+ 品牌、10 种语言、深浅主题，回收站可恢复。
+自动清理 JPG+RAW 孤立文件，筛选并同步删除 JPG/RAW 照片。软件仅 623 KB，支持 15+ 品牌、10 种语言、深浅主题，回收站可恢复。
 
-💥 **v6.0 C++ 重写：从 27.4 MB 降至 613 KB，体积仅剩 2%，功能却更多。启动 218 ms，轻到无感塞进 SD 卡。**
+💥 **v6.0 C++ 重写：从 27.4 MB 降至 623 KB，体积仅剩 2%，功能却更多。启动 218 ms，轻到无感塞进 SD 卡。**
 
 > **Keywords**: 孤立文件清理 · JPG RAW 配对 · 同步删除 JPG 和 RAW · 相机照片清理 · 照片筛选
 
@@ -52,7 +52,7 @@
 | 中文 |
 | :--- |
 | 🧹 **JPG / RAW 同步清理**：同步删除 JPG 和 RAW 文件，按基础名自动配对，绝不误删已配对文件 |
-| 📦 **极致轻量**：613 KB —— 只有初版 27.4 MB 的 2%，优化掉了 98% 的体积，比一张 JPG 照片还小几百倍 |
+| 📦 **极致轻量**：623 KB —— 只有初版 27.4 MB 的 2%，优化掉了 98% 的体积，比一张 JPG 照片还小几百倍 |
 | ⚡ **原生 C++ 重构**：C++17 + Win32 API，无 Python、无 Qt、无 .NET、无第三方库依赖，单文件 exe，启动仅 218 ms |
 | 🖼️ **RAW 内嵌缩略图预览（v6.0 新增）**：解析六大厂商品牌 RAW 内嵌的 JPG 缩略图，RAW 文件也能直接看到照片 |
 | 🖥️ **两种界面可选**：经典界面（只列出孤立文件）与对比界面（JPG / RAW 左右并排，缺哪边一目了然），选择会被记住 |
@@ -162,7 +162,7 @@
 - 新增：RAW 内嵌缩略图预览（解析六大厂商品牌 RAW 内嵌的 JPG 缩略图）
 - 新增：同步删除 JPG 和 RAW 文件（按基础名自动配对，绝不误删已配对文件）
 - 重构：C++17 + Win32 API 原生实现，不依赖 Python / Qt / .NET / 任何第三方库
-- 优化：体积从 11.6 MB 降至 613 KB（只有初版 27.4 MB 的 2%，优化掉了 98%）
+- 优化：体积从 11.6 MB 降至 623 KB（只有初版 27.4 MB 的 2%，优化掉了 98%）
 - 优化：启动速度从 1–2 s 降至 218 ms
 - 优化：扫描、缩略图、EXIF 全部由原生代码实现，运行效率全面升级
 - 保持：全部原有功能不变（10 种语言、深浅主题、勾选选择、列表预览联动、EXIF、回收站删除、防误触确认、配置记忆）
@@ -230,7 +230,7 @@
 
 ## <a id="development-notes"></a> 🛠️ 开发历程与心得
 
-最开始用 Python + tkinter 搭的框架，后来陆续加了 Pillow、多线程、多语言、主题系统这些功能，体积反倒从最初的 27.4MB 一路压到 16.2MB，最后到 11.6MB——每次更新都是功能往上加、体积往下降。但 Python 打包的架构天生有天花板，解释器、Tk 运行库、Pillow 解码模块都是躲不开的硬性开销，再往下优化的空间已经很小了。纠结了很久，我干脆决定彻底重构，用 C++17 + Win32 API 从头写整个软件。过程远没那么轻松：从圆角卡片、药丸按钮到滚动条、下拉框，所有界面都得自己画，还有 10 种语言本地化、TIFF/EXIF 解析、WIC 图像解码、RAW 内嵌缩略图提取、回收站删除、DPI 缩放、深浅主题切换……这些在 Python 里都是现成的库，到 C++ 里全得从零敲。重构前我顾虑了挺久，好在大部分繁琐重复的工作都有 AI 帮忙。换作几年前 AI 还没这么厉害的时候，这么大的重构我想都不敢想，当然这次也确实花了不少钱。最终的结果完全对得起这份付出：体积从 27.4MB 直接砍到 613KB，只剩初版的 2%；启动时间从 1-2 秒缩到 218 毫秒，内存占用也从 55MB 降到 16.7MB。功能不减反增，界面也更美观。这款软件从一开始就是纯公益免费的，就是想让低配置电脑也能用上顺手的优质工具，我自己平时也一直在用。市面上没有的软件，我就从零做一个；市面上有的但是不好用，我就做一个比它更强且免费给大家用。一直觉得用户体验才是根本。现在很多软件为了盈利堆一堆没用的功能和广告，越更越臃肿，越用越卡。我刚好反过来：每次更新都要更小、更快、功能更全，也没为了性能丢了界面颜值。虽说搭进去不少时间精力金钱，但回头看，一切都值得。
+最开始用 Python + tkinter 搭的框架，后来陆续加了 Pillow、多线程、多语言、主题系统这些功能，体积反倒从最初的 27.4MB 一路压到 16.2MB，最后到 11.6MB——每次更新都是功能往上加、体积往下降。但 Python 打包的架构天生有天花板，解释器、Tk 运行库、Pillow 解码模块都是躲不开的硬性开销，再往下优化的空间已经很小了。纠结了很久，我干脆决定彻底重构，用 C++17 + Win32 API 从头写整个软件。过程远没那么轻松：从圆角卡片、药丸按钮到滚动条、下拉框，所有界面都得自己画，还有 10 种语言本地化、TIFF/EXIF 解析、WIC 图像解码、RAW 内嵌缩略图提取、回收站删除、DPI 缩放、深浅主题切换……这些在 Python 里都是现成的库，到 C++ 里全得从零敲。重构前我顾虑了挺久，好在大部分繁琐重复的工作都有 AI 帮忙。换作几年前 AI 还没这么厉害的时候，这么大的重构我想都不敢想，当然这次也确实花了不少钱。最终的结果完全对得起这份付出：体积从 27.4MB 直接砍到 623KB，只剩初版的 2%；启动时间从 1-2 秒缩到 218 毫秒，内存占用也从 55MB 降到 16.7MB。功能不减反增，界面也更美观。这款软件从一开始就是纯公益免费的，就是想让低配置电脑也能用上顺手的优质工具，我自己平时也一直在用。市面上没有的软件，我就从零做一个；市面上有的但是不好用，我就做一个比它更强且免费给大家用。一直觉得用户体验才是根本。现在很多软件为了盈利堆一堆没用的功能和广告，越更越臃肿，越用越卡。我刚好反过来：每次更新都要更小、更快、功能更全，也没为了性能丢了界面颜值。虽说搭进去不少时间精力金钱，但回头看，一切都值得。
 
 ---
 
