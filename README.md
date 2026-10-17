@@ -85,7 +85,8 @@ For detailed instructions, see [User_Manual.txt](User_Manual.txt).
 
 ## <a id="screenshots"></a> 🖼️ Screenshots
 
-<img width="1437" height="1353" alt="JPG-RAW Pair Cleaner UI" src="https://github.com/user-attachments/assets/6872ee45-132b-431d-b612-24e041bc0896" />
+<img width="1390" height="1609" alt="image" src="https://github.com/user-attachments/assets/84b87657-7bbe-4e82-aaa8-31614789d3e4" />
+
 
 ---
 
