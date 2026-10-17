@@ -6,12 +6,12 @@
 [![Latest release](https://img.shields.io/github/v/release/KILLSTARSX/Jpg-Raw-Pair-Cleaner)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/KILLSTARSX/Jpg-Raw-Pair-Cleaner/total)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
-[![Size](https://img.shields.io/badge/size-613%20KB-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
+[![Size](https://img.shields.io/badge/size-623%20KB-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
 [![Stars](https://img.shields.io/github/stars/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/stargazers)
 
-Clean orphaned JPG/RAW files, filter and delete JPG & RAW photos in sync. Only 613 KB. Supports 15+ brands, 10 languages, dark/light themes, with Recycle Bin recovery.
+Clean orphaned JPG/RAW files, filter and delete JPG & RAW photos in sync. Only 623 KB. Supports 15+ brands, 10 languages, dark/light themes, with Recycle Bin recovery.
 
-💥 **v6.0 C++ rewrite: from 27.4 MB to 613 KB — just 2% of the size, with more features. Starts in 218 ms. Small enough to slip into an SD card without noticing.**
+💥 **v6.0 C++ rewrite: from 27.4 MB to 623 KB — just 2% of the size, with more features. Starts in 218 ms. Small enough to slip into an SD card without noticing.**
 
 > **Keywords**: orphaned jpg · orphaned raw · jpg raw pair · delete jpg with raw · camera raw cleanup · photo culling leftovers
 
@@ -52,7 +52,7 @@ Scans a folder (recursively if you want), pairs files by base name, and lists on
 | English |
 | :--- |
 | 🧹 **JPG / RAW Synchronized Cleanup**：Delete JPG and RAW together. Auto-pairs by base name; matched files are never touched |
-| 📦 **Ultra-Light**：613 KB – only 2% of the original 27.4 MB, 98% of the size optimized away; hundreds of times smaller than a single JPG photo |
+| 📦 **Ultra-Light**：623 KB – only 2% of the original 27.4 MB, 98% of the size optimized away; hundreds of times smaller than a single JPG photo |
 | ⚡ **Native C++ Rewrite**：C++17 + Win32 API. No Python, no Qt, no .NET, no third-party libraries. Single exe, 218 ms startup |
 | 🖼️ **RAW Embedded Thumbnail Preview (v6.0 new)**：Parses embedded JPG previews from six major camera brands – RAW files now show real photos |
 | 🖥️ **Two UI Modes**：Classic (orphans only) and Comparison (JPG/RAW side by side, missing side highlighted); choice is remembered |
@@ -162,7 +162,7 @@ This data is based on extreme performance scenarios; actual performance may vary
 - New: RAW embedded thumbnail preview (parses embedded JPG previews from six major camera brands)
 - New: Synchronized deletion of JPG and RAW files (auto-pairs by base name; matched files never touched)
 - Rewrite: Native C++17 + Win32 API, no Python / Qt / .NET / any third-party library
-- Optimized: Size from 11.6 MB to 613 KB (only 2% of the original 27.4 MB, 98% optimized away)
+- Optimized: Size from 11.6 MB to 623 KB (only 2% of the original 27.4 MB, 98% optimized away)
 - Optimized: Startup from 1–2 s to 218 ms
 - Optimized: Scanning, thumbnails, EXIF all implemented natively, overall efficiency upgraded
 - Kept: All original features (10 languages, themes, checkbox selection, list-preview sync, EXIF, Recycle Bin deletion, mis-touch protection, settings memory)
@@ -230,7 +230,7 @@ This data is based on extreme performance scenarios; actual performance may vary
 
 ## <a id="development-notes"></a> 🛠️ Development Notes
 
-At first, I built the framework with Python + tkinter. Over time, I added Pillow, multithreading, multilingual support, and a theme system. Surprisingly, the size kept shrinking — from the initial 27.4 MB down to 16.2 MB, and eventually to 11.6 MB. Every update added features while reducing size. But Python packaging has a natural ceiling. The interpreter, Tk runtime, and Pillow decoding modules are unavoidable fixed overheads, and there was very little room left for further optimization. After struggling with this for a long time, I decided to do a complete rewrite — using C++17 + Win32 API to build the entire application from scratch. The process was far from easy. From rounded cards and pill buttons to scrollbars and dropdowns, every part of the UI had to be hand-drawn. Add to that 10-language localization, TIFF/EXIF parsing, WIC image decoding, RAW embedded thumbnail extraction, Recycle Bin deletion, DPI scaling, and dark/light theme switching — all of which are readily available libraries in Python, but had to be written from zero in C++. Before starting the rewrite, I hesitated for quite a while. Fortunately, most of the tedious and repetitive work was handled with AI assistance. Years ago, when AI wasn't this capable, I wouldn't have even dared to imagine such a large-scale rewrite — and it did cost me a fair amount of money. The final result was well worth the effort: the size dropped from 27.4 MB straight down to 613 KB — only 2% of the original. Startup time went from 1–2 seconds to 218 ms, and memory usage fell from 55 MB to 16.7 MB. Features didn't decrease; they increased, and the interface became more polished. This software has been completely free and non-commercial from the very beginning. My goal is to let low-spec computers enjoy a high-quality, handy tool — and I use it myself all the time. If something doesn't exist on the market, I build it from scratch. If it exists but isn't good enough, I make a better one and give it away for free. I've always believed that user experience comes first. Many software products today pile on useless features and ads for profit, becoming more bloated and laggy with every update. I do the opposite: every update should be smaller, faster, and more feature-rich — without sacrificing visual polish for performance. It took a lot of time, energy, and money, but looking back, it was all worth it.
+At first, I built the framework with Python + tkinter. Over time, I added Pillow, multithreading, multilingual support, and a theme system. Surprisingly, the size kept shrinking — from the initial 27.4 MB down to 16.2 MB, and eventually to 11.6 MB. Every update added features while reducing size. But Python packaging has a natural ceiling. The interpreter, Tk runtime, and Pillow decoding modules are unavoidable fixed overheads, and there was very little room left for further optimization. After struggling with this for a long time, I decided to do a complete rewrite — using C++17 + Win32 API to build the entire application from scratch. The process was far from easy. From rounded cards and pill buttons to scrollbars and dropdowns, every part of the UI had to be hand-drawn. Add to that 10-language localization, TIFF/EXIF parsing, WIC image decoding, RAW embedded thumbnail extraction, Recycle Bin deletion, DPI scaling, and dark/light theme switching — all of which are readily available libraries in Python, but had to be written from zero in C++. Before starting the rewrite, I hesitated for quite a while. Fortunately, most of the tedious and repetitive work was handled with AI assistance. Years ago, when AI wasn't this capable, I wouldn't have even dared to imagine such a large-scale rewrite — and it did cost me a fair amount of money. The final result was well worth the effort: the size dropped from 27.4 MB straight down to 623 KB — only 2% of the original. Startup time went from 1–2 seconds to 218 ms, and memory usage fell from 55 MB to 16.7 MB. Features didn't decrease; they increased, and the interface became more polished. This software has been completely free and non-commercial from the very beginning. My goal is to let low-spec computers enjoy a high-quality, handy tool — and I use it myself all the time. If something doesn't exist on the market, I build it from scratch. If it exists but isn't good enough, I make a better one and give it away for free. I've always believed that user experience comes first. Many software products today pile on useless features and ads for profit, becoming more bloated and laggy with every update. I do the opposite: every update should be smaller, faster, and more feature-rich — without sacrificing visual polish for performance. It took a lot of time, energy, and money, but looking back, it was all worth it.
 
 ---
 
