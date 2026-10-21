@@ -1,15 +1,44 @@
 Jpg-Raw-Pair-Cleaner 5.1
 Copyright (C) 2026 KILL-STAR SX. All rights reserved.
 
-This software is licensed under the MIT License.
-Original project: https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner
-Developer GitHub: https://github.com/KILLSTARSX
+Licensed under the KILL-STAR SX Academic Source License 1.0 (KS-ASL-1.0).
+This is a source-available license, NOT an OSI open-source license and NOT MIT.
+Full text: LICENSE.
+
+Summary of the terms:
+- Attribution to KILL-STAR SX and the original project is required.
+- You must notify the Author in advance and obtain written consent before
+  developing, publishing or operating a derivative work. With consent, a
+  derivative may be closed-source, but it must retain attribution and comply
+  with the commercial/fee, patent and lawful-use rules.
+- Commercial use is permitted. Charging fees, paid distribution, paywalls,
+  advertising monetization or similar revenue requires a separate written
+  license and a revenue-sharing agreement with the Author.
+- Patenting the Software, any part of it, or a derivative work is prohibited.
+- Illegal use is prohibited; the user bears all consequences.
+- The Software is provided primarily for academic discussion and research;
+  commercial use is permitted under Section 5.
+
+Author: KILL-STAR SX
+Project: https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner
+GitHub: https://github.com/KILLSTARSX
 bilibili: https://space.bilibili.com/381623593
 
-The copyright notice above, this NOTICE file, and the LICENSE file must be
-retained in all copies or substantial portions of the Software. You may modify
-and redistribute the code, but you may not remove the author attribution and
-claim the original work as your own.
+本软件采用《KILL-STAR SX 学术源码许可协议 1.0》（KS-ASL-1.0），
+不是 MIT，也不是 OSI 认可的开源许可证，而是“源码公开”许可。
+完整条款见 LICENSE。
 
-本软件基于 MIT License 开源。允许使用、修改与再发布，但必须保留上述版权、
-作者署名、本 NOTICE 与 LICENSE 文件；不得删除署名后将原作品声称为自有程序。
+要点：
+- 必须保留作者署名与项目来源；
+- 衍生开发须提前通知作者并取得书面同意；经同意可闭源，但须保留署名，
+  并遵守商业/收费、专利与合法使用规则；
+- 允许商业使用；收费、付费分发、付费墙、广告变现等须与作者另行签订
+  书面许可与收益分配协议；
+- 禁止就本软件、其任何部分或衍生作品申请/主张专利；
+- 禁止违法使用，后果由使用者自行承担；
+- 本软件主要面向学术讨论与研究；商业使用按第五条允许。
+
+作者：KILL-STAR SX
+项目：https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner
+GitHub：https://github.com/KILLSTARSX
+bilibili：https://space.bilibili.com/381623593
