@@ -34,6 +34,7 @@ python Jpg-Raw-Pair-Cleaner.py --version
 | --- | --- |
 | `Jpg-Raw-Pair-Cleaner.py` | main program |
 | `language.json` | 10-language UI resources |
+| `camera.ico` | window / taskbar icon (loaded automatically) |
 | `requirements.txt` | optional Python dependencies |
 | `NOTICE` | attribution / license notice |
 
