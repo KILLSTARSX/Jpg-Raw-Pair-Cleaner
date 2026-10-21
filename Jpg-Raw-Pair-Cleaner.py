@@ -2,11 +2,11 @@
 # ============================================================================
 # Jpg-Raw-Pair-Cleaner 5.1
 # Copyright (C) 2026 KILL-STAR SX. All rights reserved.
-# Licensed under the MIT License. See the LICENSE file for details.
+# Licensed under the KILL-STAR SX Academic Source License 1.0. See LICENSE.
 # Original project: https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner
 #
 # This copyright and license notice is part of the source code and must be
-# retained in copies or substantial portions of the Software (MIT License).
+# retained in copies or substantial portions of the Software (KS-ASL-1.0).
 # ============================================================================
 """
 相机照片筛选工具 v5.1
@@ -145,13 +145,13 @@ APP_AUTHOR = "KILL-STAR SX"
 GITHUB_URL = "https://github.com/KILLSTARSX"            # 开发者主页
 BILIBILI_URL = "https://space.bilibili.com/381623593"   # 开发者哔哩哔哩
 APP_COPYRIGHT = "Copyright (C) 2026 KILL-STAR SX"
-APP_LICENSE = "MIT License"
+APP_LICENSE = "KILL-STAR SX Academic Source License 1.0"
 PROJECT_URL = "https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner"
 
 # 模块级开源归属信息（与关于窗口、--version 输出保持一致；请勿删除）
 __author__ = APP_AUTHOR
 __copyright__ = APP_COPYRIGHT
-__license__ = "MIT"
+__license__ = "KS-ASL-1.0"
 __project__ = PROJECT_URL
 
 # ---------- 支持的语言（英语为默认回退语言；简体/繁体/英语必备） ----------
@@ -5314,7 +5314,7 @@ class App(tk.Tk):
         about.protocol("WM_DELETE_WINDOW", self._close_about)
         about.grab_set()  # 模态：关闭前主窗口不可操作
 
-        w, h = 640, 640  # 显示面积加大（含作者/许可/宣传链接）
+        w, h = 640, 660  # 显示面积加大（含作者/许可/宣传链接）
         self.update_idletasks()
         x = self.winfo_rootx() + max(0, (self.winfo_width() - w) // 2)
         y = self.winfo_rooty() + max(0, (self.winfo_height() - h) // 2)
@@ -5549,7 +5549,7 @@ if __name__ == "__main__":
 
 # ============================================================================
 # Watermark / 开源归属标识:
-#   KILL-STAR SX · Jpg-Raw-Pair-Cleaner 5.1 · MIT License
+#   KILL-STAR SX · Jpg-Raw-Pair-Cleaner 5.1 · KS-ASL-1.0
 #   https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner
-# 本标识属于源码的一部分，请勿删除（MIT License 要求保留版权与许可声明）。
+# 本标识属于源码的一部分，请勿删除（KS-ASL-1.0 要求保留版权与许可声明）。
 # ============================================================================
