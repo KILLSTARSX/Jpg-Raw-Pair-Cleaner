@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-[![License: KS-ASL-1.0](https://img.shields.io/badge/license-KS--ASL--1.0-orange.svg)](LICENSE)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Latest release](https://img.shields.io/github/v/release/KILLSTARSX/Jpg-Raw-Pair-Cleaner)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/KILLSTARSX/Jpg-Raw-Pair-Cleaner/total)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
@@ -236,7 +236,7 @@
 
 ## 📄 许可证
 
-本项目采用 **KILL-STAR SX 学术源码许可协议 1.0（KS-ASL-1.0）**：源码公开，允许学术与商业使用；衍生开发需提前通知作者并取得书面同意（经同意可闭源，须署名）；收费、付费分发、付费墙或广告变现需另行签订书面许可与收益分配协议；禁止专利化与违法使用。完整文本见 [LICENSE](LICENSE)。
+本项目采用 **Apache License 2.0** 开源：允许使用、修改、再发布（包括闭源与商业使用），须保留版权、LICENSE、NOTICE 与作者署名，标注修改内容，并保留 Apache 2.0 的专利授权与专利诉讼终止条款。作者另提出补充请求（衍生开发前通知、收费/变现前协商并分配收益、不将原程序或其部分申请专利、不用于违法用途），见 [ADDITIONAL-TERMS.md](ADDITIONAL-TERMS.md)；这些**不是许可条件**，不改变或限制 Apache 2.0 授予的权利。
 
 ---
 
