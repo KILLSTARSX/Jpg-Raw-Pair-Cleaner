@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-[![License: KS-ASL-1.0](https://img.shields.io/badge/license-KS--ASL--1.0-orange.svg)](LICENSE)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Latest release](https://img.shields.io/github/v/release/KILLSTARSX/Jpg-Raw-Pair-Cleaner)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/KILLSTARSX/Jpg-Raw-Pair-Cleaner/total)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
@@ -236,7 +236,7 @@ At first, I built the framework with Python + tkinter. Over time, I added Pillow
 
 ## 📄 License
 
-This project is licensed under the **KILL-STAR SX Academic Source License 1.0 (KS-ASL-1.0)** — source-available; academic and commercial use are permitted. Derivative works require advance notice and the Author's written consent (closed-source allowed with consent, attribution required). Charging fees, paid distribution, paywalls or advertising monetization require a separate written license and revenue sharing; patenting and illegal use are prohibited. See [LICENSE](LICENSE).
+This project is licensed under the **Apache License 2.0**: you may use, modify, redistribute and commercialize it, including in closed-source products, provided you retain the copyright, LICENSE, NOTICE and attribution, state changes, and preserve Apache 2.0's patent grant and patent-litigation termination terms. The author additionally requests advance notice for derivatives, a revenue-sharing discussion before charging, no patenting of the original parts, and no illegal use — see [ADDITIONAL-TERMS.md](ADDITIONAL-TERMS.md). These are **not license conditions** and do not modify or restrict Apache 2.0.
 
 ---
 
