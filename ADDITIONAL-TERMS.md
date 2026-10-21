@@ -182,8 +182,8 @@ This License applies worldwide and is governed by the laws of the People's Repub
 12.3 本协议版本 1.0，自 2026-10-21 起生效。
 This License, version 1.0, is effective from 2026-10-21.
 
-12.4 在本协议生效前已按 MIT License 发布的版本，其既得权利不受影响；本协议适用于生效后发布或提供的版本。
-Rights already granted under the MIT License for versions released before the effective date of this License are not affected; this License applies to versions released or provided on or after the effective date.
+12.4 此前已按 MIT License 发布的版本仍按 MIT；当前及之后版本按 Apache License 2.0 发布。本条为事实说明，不构成许可条款。
+Versions previously released under the MIT License remain under MIT; current and later versions are released under the Apache License 2.0. This is a factual note, not a license term.
 
 版权所有 (C) 2026 KILL-STAR SX。保留所有权利。
 Copyright (C) 2026 KILL-STAR SX. All rights reserved.
