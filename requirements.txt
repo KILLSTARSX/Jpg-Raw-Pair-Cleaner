@@ -1,4 +1,5 @@
-# JPG-RAW_OrphanCleaner —— 运行依赖
+# 运行依赖清单（均为可选；缺失时程序自动降级）
+# Jpg-Raw-Pair-Cleaner —— 运行依赖
 # 说明：
 # 1) Pillow：用于 JPG 缩略图预览与 JPG EXIF 回退读取（缺失时程序仍可运行，
 #    仅预览/部分 EXIF 功能不可用）
