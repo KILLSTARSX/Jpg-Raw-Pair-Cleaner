@@ -1,21 +1,182 @@
-MIT License
+KILL-STAR SX 学术源码许可协议 1.0
+KILL-STAR SX Academic Source License 1.0
+许可证标识：KS-ASL-1.0
+适用于：Jpg-Raw-Pair-Cleaner
+版权所有 (C) 2026 KILL-STAR SX。保留所有权利。
+Copyright (C) 2026 KILL-STAR SX. All rights reserved.
 
-Copyright (c) 2026 KILLSTARSX
+【重要说明 / Important Notice】
+本协议是“源码公开”（source-available）许可，不是 OSI 认可的开源许可证。
+This is a source-available license, not an OSI-approved open-source license.
+本软件仅按本协议授权；除本协议明确授予的权利外，作者保留一切权利。
+The Software is licensed only under this License; all rights not expressly granted are reserved by the Author.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+────────────────────────────────────────────────────────────
+一、定义 / Definitions
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1.1 “软件”指 Jpg-Raw-Pair-Cleaner 的源代码、文档、图标、示例及其他随附文件，以及作者后续发布的本软件版本。
+“Software” means the source code, documentation, icons, examples and other accompanying files of Jpg-Raw-Pair-Cleaner, and later versions released by the Author.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+1.2 “衍生作品”指基于软件的全部或部分源代码进行修改、翻译、改编、组合、拆分、再开发或以其他方式形成的软件、产品、服务、文档或作品。
+“Derivative Work” means any software, product, service, document or work created by modifying, translating, adapting, combining, extracting, redeveloping or otherwise using all or part of the Software.
+
+1.3 “商业使用”指以营利为目的或直接/间接获取经济利益的使用，包括销售、许可、付费分发、收费服务、以软件为主要功能收费、广告变现，以及通过衍生作品获取收入。
+“Commercial Use” means use for profit or direct/indirect financial gain, including sale, licensing, paid distribution, paid services, charging for software-based functionality, advertising revenue, and monetizing Derivative Works.
+
+1.4 “作者”指 KILL-STAR SX。
+“Author” means KILL-STAR SX.
+
+1.5 “书面许可”包括纸质文件、电子邮件、GitHub Issue 中作者的明确书面同意，或其他可留存记录的书面形式。
+“Written permission” includes signed documents, email, the Author's explicit written consent in a GitHub Issue, or another written form that can be retained as a record.
+
+────────────────────────────────────────────────────────────
+二、授权范围 / Grant of License
+
+2.1 在遵守本协议全部条款的前提下，作者授予你一项全球范围、非独占、不可转让、可撤销、免许可费的有限许可，允许你：
+(a) 查看、下载、编译、运行本软件；
+(b) 为学术讨论、学习、教学、研究及商业目的使用本软件；
+(c) 在学术论文、课程作业或研究中引用本软件，并注明来源。
+Subject to full compliance with this License, the Author grants you a worldwide, non-exclusive, non-transferable, revocable, royalty-free limited license to:
+(a) view, download, compile and run the Software;
+(b) use the Software for academic discussion, study, teaching, research and commercial purposes;
+(c) cite the Software in academic papers, coursework or research with attribution.
+
+2.2 商业使用被允许，但收费、付费分发、广告变现等按第五条另行签订书面协议；衍生作品按第四条取得事先书面同意。
+Commercial Use is permitted; however, charging fees, paid distribution, advertising monetization and similar activities require a separate written agreement under Section 5; Derivative Works require prior written consent under Section 4.
+
+────────────────────────────────────────────────────────────
+三、署名要求 / Attribution
+
+3.1 你使用本软件或经许可的衍生作品时，必须以显著、清晰的方式标注：
+“Based on Jpg-Raw-Pair-Cleaner by KILL-STAR SX
+https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner”
+并保留软件中的版权声明、本协议及免责声明。
+When using the Software or a permitted Derivative Work, you must prominently and clearly display:
+“Based on Jpg-Raw-Pair-Cleaner by KILL-STAR SX
+https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner”
+and retain the copyright notices, this License and the disclaimers in the Software.
+
+3.2 衍生作品必须在源代码头部、README、关于页面或产品文档中说明其来源于本软件，并简要说明修改内容。
+A Derivative Work must state in its source headers, README, About page or product documentation that it is based on the Software, and briefly describe the modifications.
+
+3.3 不得删除、遮蔽、替换或弱化作者署名，不得将本软件或其核心部分声称为自己的原创作品，不得暗示作者为你的衍生作品背书。
+You may not remove, obscure, replace or weaken the Author's attribution, claim the Software or its core parts as your own original work, or imply that the Author endorses your Derivative Work.
+
+────────────────────────────────────────────────────────────
+四、衍生作品与闭源 / Derivative Works and Closed Source
+
+4.1 你应提前通知作者，并取得作者明确的书面同意，方可使用本软件的全部或部分源代码开发、发布、分发、部署或运营任何衍生作品，或将本软件用于开发新软件、产品或服务。
+You must notify the Author in advance and obtain the Author's explicit written consent before using all or part of the Software to develop, publish, distribute, deploy or operate any Derivative Work, or to develop any new software, product or service.
+
+4.2 经作者书面同意后，衍生作品可以采用闭源方式发布，但必须同时满足：
+(a) 遵守第三条署名要求；
+(b) 遵守第五条商业使用与收费规则；
+(c) 遵守第六条专利限制；
+(d) 遵守第七条合法使用要求；
+(e) 在书面同意范围内使用，不得超出作者同意的范围。
+A Derivative Work may be released as closed source only with the Author's written consent, and must:
+(a) comply with Section 3 (Attribution);
+(b) comply with Section 5 (Commercial Use and Fees);
+(c) comply with Section 6 (Patent Restrictions);
+(d) comply with Section 7 (Lawful Use);
+(e) stay within the scope of the Author's written consent.
+
+4.3 提前通知是申请许可的必要步骤，但仅通知、抄送或说明本身不构成同意；必须取得作者明确的书面同意。作者有权拒绝或附加条件。
+Advance notice is a required step for seeking permission, but notice, copy or explanation alone does not constitute consent; the Author's explicit written consent is required. The Author may refuse or attach conditions.
+
+────────────────────────────────────────────────────────────
+五、商业使用与收益分配 / Commercial Use and Revenue Sharing
+
+5.1 本协议允许商业使用，但商业使用不得违反法律法规，也不得用于第七条禁止的用途。
+Commercial Use is permitted, provided it complies with applicable laws and does not violate Section 7.
+
+5.2 如你对本软件或衍生作品收费、付费分发、设置付费墙、接受打赏式付费、进行广告变现，或通过其直接/间接获利，必须与作者另行签订书面许可/版权协议，明确授权范围、收费方式、期限、地域与收益分配比例。未签订书面协议前，不得收费或变相收费。
+If you charge fees for the Software or a Derivative Work, distribute it for a fee, set up a paywall, accept payment-like donations, monetize it through advertising, or profit directly/indirectly from it, you must enter into a separate written license/copyright agreement with the Author specifying the scope, fees, term, territory and revenue-sharing ratio. No fees or disguised fees may be charged before such an agreement is signed.
+
+5.3 收益分配比例由双方协商确定；作者有权要求按约定比例分配收益，并有权要求提供必要的销售/收入记录。
+The revenue-sharing ratio shall be negotiated by both parties; the Author may require the agreed share and reasonable sales/revenue records.
+
+5.4 不收费的商业使用被允许，但仍须遵守第三条署名、第六条专利限制和第七条合法使用要求。
+Commercial Use without charging fees is permitted, but must still comply with Section 3 (Attribution), Section 6 (Patent Restrictions) and Section 7 (Lawful Use).
+
+────────────────────────────────────────────────────────────
+六、专利限制 / Patent Restrictions
+
+6.1 你不得就本软件、本软件的任何部分、或基于本软件的衍生作品，申请、维持、授权或主张任何专利。
+You may not file, maintain, license or assert any patent covering the Software, any part of the Software, or any Derivative Work based on the Software.
+
+6.2 你不得利用专利阻止作者、其他被许可人或用户使用本软件。
+You may not use patents to prevent the Author, other licensees or users from using the Software.
+
+6.3 本条是对被许可人的合同限制，不限制第三方独立开发；作者保留其自身拥有的专利权。
+This Section is a contractual restriction on licensees and does not restrict independent third-party development; the Author reserves any patents owned by the Author.
+
+────────────────────────────────────────────────────────────
+七、合法使用 / Lawful Use
+
+7.1 不得将本软件或衍生作品用于任何违法、犯罪、欺诈、侵犯他人权利、危害公共安全或违反公序良俗的用途。
+You may not use the Software or any Derivative Work for any illegal, criminal, fraudulent, rights-infringing, public-safety-endangering or morally offensive purpose.
+
+7.2 使用者应自行遵守所在国家或地区的法律法规；因使用本软件或衍生作品产生的任何后果，由使用者自行承担，作者不承担任何责任。
+Users must comply with the laws and regulations of their jurisdiction; all consequences of using the Software or Derivative Works are borne by the user, and the Author assumes no liability.
+
+────────────────────────────────────────────────────────────
+八、学术用途 / Academic Purpose
+
+8.1 本软件主要面向学术讨论、学习、教学与研究提供；商业使用按第五条允许，但不保证适用于生产环境、关键任务或任何高风险场景。
+The Software is intended primarily for academic discussion, study, teaching and research; Commercial Use is permitted under Section 5, but the Software is not warranted for production, mission-critical or high-risk environments.
+
+8.2 在学术发表中引用本软件时，建议注明作者、软件名称、版本与项目地址；这不构成作者的额外义务。
+When citing the Software in academic publications, you are encouraged to credit the Author, software name, version and project URL; this does not create additional obligations for the Author.
+
+────────────────────────────────────────────────────────────
+九、无担保与责任限制 / No Warranty and Limitation of Liability
+
+9.1 本软件按“现状”（AS IS）提供，不附带任何明示或默示担保，包括但不限于适销性、特定用途适用性、所有权与不侵权担保。
+The Software is provided “AS IS”, without any express or implied warranty, including but not limited to merchantability, fitness for a particular purpose, title and non-infringement.
+
+9.2 在适用法律允许的最大范围内，作者不对任何直接、间接、附带、特殊、惩罚性或后果性损害承担责任，包括数据丢失、业务中断、利润损失或第三方索赔。
+To the maximum extent permitted by applicable law, the Author is not liable for any direct, indirect, incidental, special, punitive or consequential damages, including data loss, business interruption, lost profits or third-party claims.
+
+────────────────────────────────────────────────────────────
+十、终止 / Termination
+
+10.1 你违反本协议任何条款时，本协议授予你的全部权利自动终止。
+All rights granted to you under this License terminate automatically upon any breach of this License.
+
+10.2 终止后，你必须立即停止使用本软件，并删除或销毁你持有或控制的所有软件副本及衍生作品（法律法规要求保留的除外）。
+Upon termination, you must immediately stop using the Software and delete or destroy all copies of the Software and Derivative Works in your possession or control, except where retention is required by law.
+
+10.3 第三条（署名）、第五条（商业使用与收益分配）、第六条（专利限制）、第七条（合法使用）、第九条（无担保与责任限制）和本条在终止后继续有效。
+Sections 3 (Attribution), 5 (Commercial Use and Revenue Sharing), 6 (Patent Restrictions), 7 (Lawful Use), 9 (No Warranty and Limitation of Liability) and this Section survive termination.
+
+────────────────────────────────────────────────────────────
+十一、许可申请与联系方式 / Permission Requests and Contact
+
+许可申请、商业合作、收益分配与侵权举报，请通过以下方式联系作者：
+For permission requests, commercial cooperation, revenue sharing and infringement reports, contact the Author via:
+
+- GitHub 仓库 Issues：https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/issues
+- 作者 GitHub：https://github.com/KILLSTARSX
+- bilibili：https://space.bilibili.com/381623593
+
+作者将在合理时间内回复；在收到明确的书面许可前，请勿使用本软件开发衍生作品或进行商业使用。
+The Author will respond within a reasonable time; do not develop Derivative Works before receiving explicit written consent, and do not charge fees before signing the separate commercial agreement.
+
+────────────────────────────────────────────────────────────
+十二、其他 / Miscellaneous
+
+12.1 本协议以中文版本为准；英文译文仅为方便阅读，如有冲突，以中文版本为准。
+The Chinese version of this License prevails; the English translation is provided for convenience only, and the Chinese version controls in case of conflict.
+
+12.2 本协议在全球范围内适用；本协议适用中华人民共和国法律；因本协议引起的争议，由作者住所地有管辖权的人民法院管辖，作者亦可在其他有管辖权的司法辖区依法主张权利。
+This License applies worldwide and is governed by the laws of the People's Republic of China; disputes arising from this License shall be submitted to the competent people's court at the Author's domicile, and the Author may also enforce the Author's rights in other competent jurisdictions.
+
+12.3 本协议版本 1.0，自 2026-10-21 起生效。
+This License, version 1.0, is effective from 2026-10-21.
+
+12.4 在本协议生效前已按 MIT License 发布的版本，其既得权利不受影响；本协议适用于生效后发布或提供的版本。
+Rights already granted under the MIT License for versions released before the effective date of this License are not affected; this License applies to versions released or provided on or after the effective date.
+
+版权所有 (C) 2026 KILL-STAR SX。保留所有权利。
+Copyright (C) 2026 KILL-STAR SX. All rights reserved.
