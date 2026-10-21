@@ -1,0 +1,11 @@
+# JPG-RAW_OrphanCleaner —— 运行依赖
+# 说明：
+# 1) Pillow：用于 JPG 缩略图预览与 JPG EXIF 回退读取（缺失时程序仍可运行，
+#    仅预览/部分 EXIF 功能不可用）
+# 2) send2trash：回收站删除首选库（缺失时自动回退 ctypes + SHFileOperationW，
+#    效果相同）；正式使用建议安装
+# 3) exifread：纯 Python EXIF 解析（JPG 与 TIFF-based RAW 优先使用，字段
+#    识别更完整；缺失时回退 Pillow / 内置 TIFF 解析）
+send2trash>=1.8.2
+Pillow>=9.1
+exifread>=3.0
