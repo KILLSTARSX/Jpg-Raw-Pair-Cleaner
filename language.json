@@ -1,6 +1,6 @@
 {
   "en": {
-    "app_title": "JPG-RAW_OrphanCleaner",
+    "app_title": "Jpg-Raw-Pair-Cleaner",
     "target_folder": "Target folder:",
     "browse": "Browse...",
     "scan": "Scan",
@@ -150,7 +150,7 @@
     "pair_count_fmt": "Total {total} pairs: complete {ok} · missing RAW {no_raw} · missing JPG {no_jpg}"
   },
   "zh-CN": {
-    "app_title": "JPG-RAW_OrphanCleaner",
+    "app_title": "Jpg-Raw-Pair-Cleaner",
     "target_folder": "目标文件夹：",
     "browse": "浏览…",
     "scan": "开始扫描",
@@ -300,7 +300,7 @@
     "pair_count_fmt": "共 {total} 组：齐全 {ok} · 缺 RAW {no_raw} · 缺 JPG {no_jpg}"
   },
   "zh-TW": {
-    "app_title": "JPG-RAW_OrphanCleaner",
+    "app_title": "Jpg-Raw-Pair-Cleaner",
     "target_folder": "目標資料夾：",
     "browse": "瀏覽…",
     "scan": "開始掃描",
@@ -450,7 +450,7 @@
     "pair_count_fmt": "共 {total} 組：齊全 {ok} · 缺 RAW {no_raw} · 缺 JPG {no_jpg}"
   },
   "ja": {
-    "app_title": "JPG-RAW_OrphanCleaner",
+    "app_title": "Jpg-Raw-Pair-Cleaner",
     "target_folder": "対象フォルダ：",
     "browse": "参照…",
     "scan": "スキャン開始",
@@ -600,7 +600,7 @@
     "pair_count_fmt": "全 {total} 組：揃い {ok} · RAW なし {no_raw} · JPG なし {no_jpg}"
   },
   "ko": {
-    "app_title": "JPG-RAW_OrphanCleaner",
+    "app_title": "Jpg-Raw-Pair-Cleaner",
     "target_folder": "대상 폴더:",
     "browse": "찾아보기...",
     "scan": "스캔 시작",
@@ -750,7 +750,7 @@
     "pair_count_fmt": "총 {total}쌍: 완전 {ok} · RAW 없음 {no_raw} · JPG 없음 {no_jpg}"
   },
   "fr": {
-    "app_title": "JPG-RAW_OrphanCleaner",
+    "app_title": "Jpg-Raw-Pair-Cleaner",
     "target_folder": "Dossier cible :",
     "browse": "Parcourir…",
     "scan": "Analyser",
@@ -900,7 +900,7 @@
     "pair_count_fmt": "{total} paires : complètes {ok} · RAW manquant {no_raw} · JPG manquant {no_jpg}"
   },
   "de": {
-    "app_title": "JPG-RAW_OrphanCleaner",
+    "app_title": "Jpg-Raw-Pair-Cleaner",
     "target_folder": "Zielordner:",
     "browse": "Durchsuchen…",
     "scan": "Scannen",
@@ -1050,7 +1050,7 @@
     "pair_count_fmt": "{total} Paare: vollständig {ok} · RAW fehlt {no_raw} · JPG fehlt {no_jpg}"
   },
   "es": {
-    "app_title": "JPG-RAW_OrphanCleaner",
+    "app_title": "Jpg-Raw-Pair-Cleaner",
     "target_folder": "Carpeta de destino:",
     "browse": "Examinar…",
     "scan": "Escanear",
@@ -1200,7 +1200,7 @@
     "pair_count_fmt": "{total} pares: completos {ok} · falta RAW {no_raw} · falta JPG {no_jpg}"
   },
   "ru": {
-    "app_title": "JPG-RAW_OrphanCleaner",
+    "app_title": "Jpg-Raw-Pair-Cleaner",
     "target_folder": "Целевая папка:",
     "browse": "Обзор…",
     "scan": "Сканировать",
@@ -1350,7 +1350,7 @@
     "pair_count_fmt": "Всего {total} пар: есть оба {ok} · нет RAW {no_raw} · нет JPG {no_jpg}"
   },
   "pt": {
-    "app_title": "JPG-RAW_OrphanCleaner",
+    "app_title": "Jpg-Raw-Pair-Cleaner",
     "target_folder": "Pasta de destino:",
     "browse": "Procurar…",
     "scan": "Digitalizar",
