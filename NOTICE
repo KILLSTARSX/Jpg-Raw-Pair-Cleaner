@@ -1,44 +1,26 @@
 Jpg-Raw-Pair-Cleaner 5.1
 Copyright (C) 2026 KILL-STAR SX. All rights reserved.
 
-Licensed under the KILL-STAR SX Academic Source License 1.0 (KS-ASL-1.0).
-This is a source-available license, NOT an OSI open-source license and NOT MIT.
-Full text: LICENSE.
+This product is licensed under the Apache License, Version 2.0.
+You may obtain a copy of the License at:
 
-Summary of the terms:
-- Attribution to KILL-STAR SX and the original project is required.
-- You must notify the Author in advance and obtain written consent before
-  developing, publishing or operating a derivative work. With consent, a
-  derivative may be closed-source, but it must retain attribution and comply
-  with the commercial/fee, patent and lawful-use rules.
-- Commercial use is permitted. Charging fees, paid distribution, paywalls,
-  advertising monetization or similar revenue requires a separate written
-  license and a revenue-sharing agreement with the Author.
-- Patenting the Software, any part of it, or a derivative work is prohibited.
-- Illegal use is prohibited; the user bears all consequences.
-- The Software is provided primarily for academic discussion and research;
-  commercial use is permitted under Section 5.
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+This product includes software developed by KILL-STAR SX
+(https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner).
 
 Author: KILL-STAR SX
 Project: https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner
 GitHub: https://github.com/KILLSTARSX
 bilibili: https://space.bilibili.com/381623593
 
-本软件采用《KILL-STAR SX 学术源码许可协议 1.0》（KS-ASL-1.0），
-不是 MIT，也不是 OSI 认可的开源许可证，而是“源码公开”许可。
-完整条款见 LICENSE。
-
-要点：
-- 必须保留作者署名与项目来源；
-- 衍生开发须提前通知作者并取得书面同意；经同意可闭源，但须保留署名，
-  并遵守商业/收费、专利与合法使用规则；
-- 允许商业使用；收费、付费分发、付费墙、广告变现等须与作者另行签订
-  书面许可与收益分配协议；
-- 禁止就本软件、其任何部分或衍生作品申请/主张专利；
-- 禁止违法使用，后果由使用者自行承担；
-- 本软件主要面向学术讨论与研究；商业使用按第五条允许。
-
-作者：KILL-STAR SX
-项目：https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner
-GitHub：https://github.com/KILLSTARSX
-bilibili：https://space.bilibili.com/381623593
+补充说明：`ADDITIONAL-TERMS.md` 是作者的补充请求，**不是许可条款**，
+不改变 Apache License 2.0 授予的权利；如与 Apache 2.0 冲突，以 Apache 2.0 为准。
+Additional requests in `ADDITIONAL-TERMS.md` are **not license conditions** and do
+not modify the Apache License 2.0; Apache 2.0 controls in case of conflict.
