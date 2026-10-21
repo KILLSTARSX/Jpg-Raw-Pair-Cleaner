@@ -211,12 +211,31 @@ This data is based on extreme performance scenarios; actual performance may vary
 - New: EXIF display, thumbnail cache, multi-core parallel
 - Fixed: Scroll wheel stutter in preview, thumbnail stacking when dragging slider, filename becoming default after upload
 
-**v3.3** — Larger About window, removed manual select button and lock logic
-**v3.2** — Auto-detect display fix, force delete, slider snapping
-**v3.1** — Grid preview, three thumbnail sizes, auto-detect lock
-**v3.0** — Auto-detect, format mismatch protection, settings memory
-**v2.0** — Multiple RAW formats, recursive scanning
-**v1.0** — Basic RAW / JPG filter deletion
+**v3.3**
+- New: Larger About window
+- Removed: Manual select button and lock logic
+
+**v3.2**
+- New: Auto-detect display fix
+- New: Force delete
+- New: Slider snapping
+
+**v3.1**
+- New: Grid preview
+- New: Three thumbnail sizes
+- New: Auto-detect lock
+
+**v3.0**
+- New: Auto-detect
+- New: Format mismatch protection
+- New: Settings memory
+
+**v2.0**
+- New: Multiple RAW format support
+- New: Recursive scanning
+
+**v1.0**
+- New: Basic RAW / JPG filter deletion
 
 ---
 
