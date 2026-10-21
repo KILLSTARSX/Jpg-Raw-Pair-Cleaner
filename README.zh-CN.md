@@ -267,7 +267,7 @@
 ---
 
 <details>
-<summary>点击欢迎赞助（微信赞助码）</summary>
+<summary>点击欢迎赞助（请作者喝一杯咖啡☕）</summary>
 
 <br>
 
