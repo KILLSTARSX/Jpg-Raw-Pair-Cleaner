@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # ============================================================================
-# JPG-RAW_OrphanCleaner 5.1
+# Jpg-Raw-Pair-Cleaner 5.1
 # Copyright (C) 2026 KILL-STAR SX. All rights reserved.
 # Licensed under the MIT License. See the LICENSE file for details.
 # Original project: https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner
@@ -139,7 +139,7 @@ from tkinter import filedialog, messagebox, ttk
 
 # ---------- 基本信息 ----------
 
-APP_NAME = "JPG-RAW_OrphanCleaner"
+APP_NAME = "Jpg-Raw-Pair-Cleaner"
 APP_VERSION = "5.1"
 APP_AUTHOR = "KILL-STAR SX"
 GITHUB_URL = "https://github.com/KILLSTARSX"            # 开发者主页
@@ -498,7 +498,7 @@ def resource_path(rel_path: str) -> str:
 # 外置语言资源（language.json）读取失败时的内置兜底（精简版，仅覆盖最常用键）
 _BUILTIN_LANG = {
     "en": {
-        "app_title": "JPG-RAW_OrphanCleaner", "target_folder": "Target folder:",
+        "app_title": "Jpg-Raw-Pair-Cleaner", "target_folder": "Target folder:",
         "browse": "Browse...", "scan": "Scan", "about": "About", "language": "语言",
         "auto_label": "Auto-detect", "custom_label": "Custom",
         "auto_placeholder": "(Auto-detect)", "field_sep": ": ",
@@ -529,7 +529,7 @@ _BUILTIN_LANG = {
         "pair_action_keep_mismatch": "Keep - format not matched",
     },
     "zh-CN": {
-        "app_title": "JPG-RAW_OrphanCleaner", "target_folder": "目标文件夹：",
+        "app_title": "Jpg-Raw-Pair-Cleaner", "target_folder": "目标文件夹：",
         "browse": "浏览…", "scan": "开始扫描", "about": "关于", "language": "Language",
         "auto_label": "自动识别", "custom_label": "自定义",
         "auto_placeholder": "（自动识别）", "field_sep": "：",
@@ -5453,7 +5453,7 @@ class App(tk.Tk):
 
 def _selftest(folder: str, report: str = None) -> int:
     """打包自检（仅诊断用，不影响正常使用）：扫描文件夹并验证依赖是否可用。
-    用法：JPG-RAW_OrphanCleaner.exe --selftest <文件夹> [报告文件]
+    用法：Jpg-Raw-Pair-Cleaner.exe --selftest <文件夹> [报告文件]
     用于确认裁剪打包体积后 JPEG 解码 / EXIF 读取 / RAW 解析仍然正常。"""
     out = []
 
@@ -5549,7 +5549,7 @@ if __name__ == "__main__":
 
 # ============================================================================
 # Watermark / 开源归属标识:
-#   KILL-STAR SX · JPG-RAW_OrphanCleaner 5.1 · MIT License
+#   KILL-STAR SX · Jpg-Raw-Pair-Cleaner 5.1 · MIT License
 #   https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner
 # 本标识属于源码的一部分，请勿删除（MIT License 要求保留版权与许可声明）。
 # ============================================================================
