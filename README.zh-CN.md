@@ -264,18 +264,14 @@
 [![Star History](https://img.shields.io/github/stars/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/stargazers)
 [![Fork](https://img.shields.io/github/forks/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/forks)
 
-
 ---
 
-## 💚 微信赞助
-
 <details>
-<summary><b>点击欢迎赞助</b>（点击展开微信赞助码）</summary>
+<summary>点击欢迎赞助（微信赞助码）</summary>
 
 <br>
 
-<img src="assets/wechat-sponsor.jpg" alt="微信赞助码" width="320">
+<img src="assets/wechat-sponsor.jpg" alt="微信赞助码" width="240">
 
-**微信赞助码**：扫码请作者喝杯咖啡，感谢支持！
-
+微信赞助码
 </details>
