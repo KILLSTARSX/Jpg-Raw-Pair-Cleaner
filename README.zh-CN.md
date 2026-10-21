@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License: KS-ASL-1.0](https://img.shields.io/badge/license-KS--ASL--1.0-orange.svg)](LICENSE)
 [![Latest release](https://img.shields.io/github/v/release/KILLSTARSX/Jpg-Raw-Pair-Cleaner)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/KILLSTARSX/Jpg-Raw-Pair-Cleaner/total)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-brightgreen)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases/latest)
@@ -236,7 +236,7 @@
 
 ## 📄 许可证
 
-本项目采用 **MIT License** 开源协议，完全免费开源，完整文本见 [LICENSE](LICENSE)。
+本项目采用 **KILL-STAR SX 学术源码许可协议 1.0（KS-ASL-1.0）**：源码公开，允许学术与商业使用；衍生开发需提前通知作者并取得书面同意（经同意可闭源，须署名）；收费、付费分发、付费墙或广告变现需另行签订书面许可与收益分配协议；禁止专利化与违法使用。完整文本见 [LICENSE](LICENSE)。
 
 ---
 
