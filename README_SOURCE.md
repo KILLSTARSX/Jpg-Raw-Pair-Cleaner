@@ -1,4 +1,4 @@
-# JPG-RAW_OrphanCleaner 5.1 (Python source)
+# Jpg-Raw-Pair-Cleaner 5.1 (Python source)
 
 **Author:** KILL-STAR SX  
 **Copyright:** Copyright (C) 2026 KILL-STAR SX. All rights reserved.  
@@ -15,7 +15,7 @@ Recycle Bin (recoverable). 10 languages, light/dark themes, JPG preview and EXIF
 
 ```bash
 python -m pip install -r requirements.txt
-python photo_pair_cleaner.py
+python Jpg-Raw-Pair-Cleaner.py
 ```
 
 Python 3.10+ on Windows. Pillow / send2trash / exifread are optional: the app
@@ -24,15 +24,15 @@ still runs without them, with reduced preview / recycle-bin fallback behaviour.
 Diagnostics:
 
 ```bash
-python photo_pair_cleaner.py --selftest <folder-with-photos> report.txt
-python photo_pair_cleaner.py --version
+python Jpg-Raw-Pair-Cleaner.py --selftest <folder-with-photos> report.txt
+python Jpg-Raw-Pair-Cleaner.py --version
 ```
 
 ## Files
 
 | File | Purpose |
 | --- | --- |
-| `photo_pair_cleaner.py` | main program |
+| `Jpg-Raw-Pair-Cleaner.py` | main program |
 | `language.json` | 10-language UI resources |
 | `requirements.txt` | optional Python dependencies |
 | `NOTICE` | attribution / license notice |
