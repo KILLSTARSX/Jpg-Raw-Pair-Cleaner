@@ -260,6 +260,7 @@ This project is licensed under the **Apache License 2.0**: you may use, modify, 
 ---
 
 ## ⭐ If it helped, a star is appreciated!
+Sponsorship welcome:https://ko-fi.com/killstarsx
 
 [![Star History](https://img.shields.io/github/stars/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/stargazers)
 [![Fork](https://img.shields.io/github/forks/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/forks)
