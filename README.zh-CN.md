@@ -412,7 +412,15 @@ RAW 子文件夹命名示例：
 
 ## ⭐ 如果这个项目对您有帮助，欢迎点个 Star！
 
-赞助支持：[Ko-fi](https://ko-fi.com/killstarsx)
+<details>
+<summary>点击欢迎赞助（请作者喝一杯咖啡☕）</summary>
+
+<br>
+
+<img src="assets/wechat-sponsor.jpg" alt="微信赞助码" width="240">
+
+微信赞助码
+</details>\
 
 [![Star History](https://img.shields.io/github/stars/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/stargazers)
 [![Fork](https://img.shields.io/github/forks/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/forks)
