@@ -293,7 +293,6 @@ Actual performance depends on the computer, storage device, file formats, image 
 - **Improved: First-launch language detection** — Simplified Chinese system locales map to Simplified Chinese; Traditional Chinese locales, including Taiwan, Hong Kong, and Macau, map to Traditional Chinese. Unsupported languages fall back to English, and the detected choice is saved.
 - **Fixed: About-window flicker** — buffered drawing removes visual flicker when hovering over links.
 - **Fixed: Organizer preview spacing** — removed the unnecessary divider and adjusted the spacing between the summary area and folder cards.
-- **Adjusted: About-window prompt schedule** — shown approximately two seconds after the 1st, 10th, and 20th successful cleanup operations; it does not appear after every deletion.
 
 ### **v6.0 — Native C++ Rewrite + RAW Thumbnail Preview**
 
