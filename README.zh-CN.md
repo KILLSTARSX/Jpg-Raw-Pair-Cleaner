@@ -420,7 +420,7 @@ RAW 子文件夹命名示例：
 <img src="assets/wechat-sponsor.jpg" alt="微信赞助码" width="240">
 
 微信赞助码
-</details>\
+</details>
 
 [![Star History](https://img.shields.io/github/stars/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/stargazers)
 [![Fork](https://img.shields.io/github/forks/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/forks)
