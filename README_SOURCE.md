@@ -1,4 +1,4 @@
-# Jpg-Raw-Pair-Cleaner 5.1 (Python source)
+# Jpg-Raw-Pair-Cleaner
 
 **Author:** KILL-STAR SX  
 **Copyright:** Copyright (C) 2026 KILL-STAR SX. All rights reserved.  
