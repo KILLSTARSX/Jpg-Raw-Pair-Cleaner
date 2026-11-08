@@ -11,17 +11,6 @@
 
 **Find orphaned JPG/RAW photos, compare pairs side by side, and organize photo folders — in one lightweight Windows app.** Cleanup matches photos by filename and moves the selected files to the Recycle Bin; the Photo Organizer files them away by format, camera brand, photo orientation, or capture date.
 
-> **v6.2 — Four organization modes, plus a visual and interaction pass**  
-> The organizer grows from two modes to four: by format (now including VIDEO), by camera brand, **by photo orientation** (landscape / portrait / square), and **by capture date** (year / month / week / day / specific day). Adds a category color system, a photo-to-folder hint strip, eased dropdown and card animations, and standardized date folder names.
-
-> **v6.1 — Photo Organizer + comparison improvements**  
-> A dedicated organizer window with live preview, configurable destinations, move/copy modes, and camera-brand RAW subfolders.
-
-> **v6.0 — Native C++ rewrite**  
-> Rebuilt with C++17 and the Win32 API. The single-file executable dropped from 27.4 MB to about 623 KB, and measured startup time from 1–2 s to 218 ms.
-
-> **Keywords:** orphaned JPG · orphaned RAW · JPG RAW pair · photo cleanup · photo organizer · sort photos by orientation · sort by capture date · RAW file sorter
-
 ---
 
 ## 📖 Table of Contents
