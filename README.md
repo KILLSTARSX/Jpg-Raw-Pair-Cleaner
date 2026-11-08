@@ -258,7 +258,7 @@ Other rules:
 ### **v6.2 — Four organization modes + visual and interaction pass**
 
 - **Four ways to organize**: by format (now including video), by camera brand, by photo orientation (landscape / portrait / square, judged from the display proportions after EXIF correction), and by capture date (year / month / week / day / specific day).
-- **Standardized date folders**: `YYYY`, `YYYY-MM`, `YYYY-Www`, `YYYY-MM-DD`; weeks follow ISO 8601 and stay correct across year boundaries, and the “ISO week” jargon is gone from the UI.
+- **Standardized date folders**: `YYYY`, `YYYY-MM`, `YYYY-Www`, `YYYY-MM-DD`; weeks follow ISO 8601 and stay correct across year boundaries.
 - **Category colors and a hint strip**: blue for JPG / landscape, amber for RAW / portrait, green for square, violet for video, applied to icons, labels, and bars; the orientation cards state the photo-to-folder mapping outright and follow your choice in two-folder mode.
 - **Lightweight eased animations**: dropdowns fade in over 150 ms with a small upward shift and out over 110 ms; buttons, cards, and the slider share the same curves, and everything is skipped when Windows “Show animations” is off.
 - **Fixed**: empty EXIF on ARW files, truncated button captions at 1080p, black nubs on the calendar and dropdown corners, and neutral Chinese being detected as Traditional.
