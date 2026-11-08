@@ -279,21 +279,103 @@ Other rules:
 - **Fixed: truncated button captions at 1080p** — widths are now measured in device pixels with a safety margin.
 - **Fixed: neutral Chinese being detected as Traditional**, and “specific day” reverting to “by year” after the year mode was added.
 
-### **v6.1 — Photo Organizer + comparison improvements**
+### **v6.1 — Photo Organization + Pair Comparison Improvements**
 
-- New standalone organizer: archive by format or camera brand, with move/copy, subfolder inclusion, custom folder names and full paths.
-- New live visual preview: file counts, total size, destination paths, sample filenames, and proportion bars — no separate Preview button.
-- Safety: no overwrites, already-organized files skipped, nested destinations excluded from scanning.
-- Improved: sorting on every comparison column plus status filtering; default order Missing RAW → Missing JPG → Complete.
-- Improved: first-launch language detection; HK/Macao/Taiwan map to Traditional Chinese, unmatched languages fall back to English.
+- **New: Photo Organizer** — organize JPG and RAW files into separate destinations, or sort RAW files into camera-brand/extension subfolders.
+- **New: Two organization modes** — organize by format (JPG / RAW) or by camera brand. Brand mode offers five RAW folder-naming patterns, including extension + brand, extension only, brand in parentheses, brand only, and suffix-only folder names.
+- **New: Configurable destinations** — source folder defaults to the main window's selected folder; destination root defaults to the source folder. JPG/RAW folder names can be customized, or replaced with full paths.
+- **New: Move or copy** — moving is the default; Copy mode preserves the original files. Optional recursive organization includes subfolders.
+- **New: Automatic visual plan preview** — live summary of file count, total size, and destination-folder count, followed by a card for each destination with its path, file breakdown, sample filenames, and size. The preview updates automatically and does not modify files.
+- **New: Confirmation and result summary** — review the planned folders and file count before execution; afterward, see moved/copied totals and any individual failures.
+- **Safety: Collision handling** — never silently overwrites a different file; conflicting names receive a numbered suffix. Files already in their destination are skipped, and destination folders nested under the source are excluded from scanning. Shared `.DNG` files are grouped under `RAW(DNG)` in brand mode.
+- **Optimized: Comparison sorting** — all five text columns (JPG, RAW, folder, status, and action) can be sorted in either direction. The default status order is Missing RAW → Missing JPG → Complete.
+- **New: Clickable status filters** — select Complete, Missing RAW, or Missing JPG from the legend to filter the comparison list; click again to clear the filter.
+- **Improved: First-launch language detection** — Simplified Chinese system locales map to Simplified Chinese; Traditional Chinese locales, including Taiwan, Hong Kong, and Macau, map to Traditional Chinese. Unsupported languages fall back to English, and the detected choice is saved.
+- **Fixed: About-window flicker** — buffered drawing removes visual flicker when hovering over links.
+- **Fixed: Organizer preview spacing** — removed the unnecessary divider and adjusted the spacing between the summary area and folder cards.
 
-### **v6.0 — Native C++ rewrite + RAW thumbnails**
+### **v6.0 — Native C++ Rewrite + RAW Thumbnail Preview**
 
-- Rewritten in C++17 + Win32 with no Python / Qt / .NET / third-party libraries.
-- Size 11.6 MB → 623 KB (2% of the original 27.4 MB); startup 1–2 s → 218 ms.
-- Added RAW embedded thumbnail preview; all previous features kept.
+- **New:** RAW embedded thumbnail preview.
+- **Rewrite:** Native C++17 + Win32 API; no Python / Qt / .NET / third-party runtime or library dependencies.
+- **Optimized:** Executable size reduced from 11.6 MB to 623 KB — approximately 2% of the original 27.4 MB build.
+- **Optimized:** Startup time reduced from 1–2 seconds to 218 ms in the recorded test.
+- **Optimized:** Scanning, thumbnail handling, and EXIF reading implemented natively.
+- **Kept:** Existing features, including 10 languages, light/dark themes, checkbox selection, list–preview synchronization, EXIF, Recycle Bin deletion, mis-touch protection, and settings memory.
 
-> Release notes for v5.x and earlier are on the [Releases page](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/releases).
+### **v5.1 — Dual UI Modes + Comparison View**
+
+- **New:** Comparison view with JPG and RAW displayed side by side. Missing sides are left blank; green indicates a complete pair, yellow indicates Missing JPG, and red indicates Missing RAW.
+- **New:** Switch between Classic and Comparison views from the app-bar View selector; the selection is remembered.
+- **New:** Action column explains whether a row will be deleted and why it may be kept.
+- **New:** Background-color marking and Missing-only options.
+- **New:** Live status legend showing total pairs, complete pairs, Missing RAW, and Missing JPG.
+- **New:** Sorting by JPG filename, RAW filename, status, and action.
+- **Optimized:** Larger custom-drawn radio controls for the deletion mode.
+- **Optimized:** Resizable columns with a minimum width based on the header text.
+
+### **v5.0 — Localization + Themes + Checkbox Selection**
+
+- **New:** 10 languages with first-launch system-language detection.
+- **New:** Localized camera-brand names.
+- **New:** Light and Dark themes, following the system by default.
+- **New:** Selection controls in both the file list and thumbnail preview (list checkbox, thumbnail badge, and Space key).
+- **New:** Remembered checkbox state; deletion totals include checked files only.
+- **New:** Bidirectional list–preview synchronization.
+- **New:** Custom-drawn rounded scrollbars, pill buttons, dropdowns, sliders, and cards.
+- **New:** Custom confirmation dialog designed to reduce accidental deletion.
+- **Optimized:** Package size reduced from 16.2 MB to 11.6 MB.
+
+### **v4.1**
+
+- **New:** Modern rounded-card interface.
+- **Optimized:** Package size reduced to approximately 16.2 MB.
+
+### **v4.0**
+
+- **New:** Recoverable deletion through the Windows Recycle Bin, with an explicit confirmation dialog.
+- **New:** Aligned nine-field detailed EXIF display and a compact EXIF mode.
+- **New:** Copy EXIF by double-clicking the EXIF area or using the right-click menu.
+- **New:** Click a thumbnail or list row to display the photo's EXIF information.
+- **New:** Double-click a thumbnail to locate the file in Windows Explorer.
+- **New:** Preview automatically scrolls to the top after changing folders.
+- **Fixed:** RAW EXIF parsing; unavailable fields display `--`.
+- **Optimized:** Thumbnail caching and multi-core parallel processing.
+- **Optimized:** Package size reduced by approximately 40% (26.7 MB → 16.2 MB).
+
+### **v3.6**
+
+- **New:** Fixed status bar, proportional card scaling, thumbnails retained when switching modes, lazy EXIF loading, and RAW EXIF support.
+
+### **v3.5**
+
+- **New:** EXIF display, thumbnail cache, and multi-core parallel processing.
+- **Fixed:** Preview scroll-wheel stutter, thumbnail stacking while dragging the size slider, and filename reset after folder selection.
+
+### **v3.3**
+
+- **New:** Larger About window.
+- **Removed:** Manual-select button and its associated locking logic.
+
+### **v3.2**
+
+- **New:** Automatic-detection display fix, force-delete option, and slider snapping.
+
+### **v3.1**
+
+- **New:** Grid preview, three thumbnail sizes, and automatic-detection lock.
+
+### **v3.0**
+
+- **New:** Automatic RAW detection, format-mismatch protection, and settings memory.
+
+### **v2.0**
+
+- **New:** Multiple RAW format support and recursive scanning.
+
+### **v1.0**
+
+- **New:** Basic JPG / RAW filtering and deletion.
 
 ---
 
