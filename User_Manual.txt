@@ -353,26 +353,56 @@ Built-in brands (extensions in brackets):
   · 1080p / 2K / 4K displays and 100%-200% scaling are all supported; if text
     looks truncated, make the window wider and check for a newer version.
 
-【Changelog】(current version highlights; earlier versions are in "About")
-  v6.2 highlights:
-  · Organizer expanded to four modes: format (now with VIDEO), camera brand,
-    photo orientation (landscape/portrait/square, three or two folders), and
-    capture date (year/month/week/day/specific day, ISO 8601 weeks);
-  · New category color system (blue = JPG/landscape, amber = RAW/portrait,
-    soft green = square, violet = video) applied to icons, labels and bars;
-  · New orientation hint strip that states the photo-to-folder mapping;
-  · Lightweight animations: dropdowns fade in/out with a slight shift, cards
-    and the slider ease; all skipped when Windows animations are off;
-  · Rounded corners of the calendar and dropdowns are now truly transparent;
-  · ARW EXIF fixed (thumbnail IFD no longer overwrites the main IFD);
-  · Button captions no longer truncated at 1080p / 100% scaling.
-  v6.1 highlights:
-  · New Photo Organizer window with live preview, move/copy, subfolder support,
-    custom folder names and full paths.
-  v6.0 highlights:
+【Changelog】
+  v6.2:
+  · The organizer grows from two modes to four: by format (JPG / RAW / VIDEO),
+    by camera brand, by photo orientation (landscape / portrait / square), and
+    by capture date (year / month / week / day / one specific day);
+  · New: organize by orientation, judged from the proportions after EXIF
+    orientation is applied. Whole-card buttons, three-folder or two-folder mode;
+    in two-folder mode the square destination is your choice and Start stays
+    disabled until you make it;
+  · New: organize by capture date with standardized folder names
+    (2026 / 2026-11 / 2026-W45 / 2026-11-04); weeks follow ISO 8601 and land in
+    the right week-year across boundaries; unknown dates can go to their own
+    folder or be skipped;
+  · New category colors: blue for JPG and landscape, amber for RAW and portrait,
+    soft green for square, violet for video, applied to folder icons, labels and
+    proportion bars;
+  · New orientation hint strip that states the photo-to-folder mapping and
+    follows your choice in two-folder mode;
+  · New lightweight easing: dropdowns fade in and out with a small shift, and
+    buttons, cards and the slider ease as well; everything completes instantly
+    when Windows "Show animations" is off;
+  · Fixed: black nubs on the rounded corners of the calendar and dropdowns;
+  · Fixed: ARW EXIF showing as empty (all-zero thumbnail-IFD tags no longer
+    overwrite the main IFD);
+  · Fixed: button captions truncated at 1080p;
+  · Fixed: neutral Chinese detected as Traditional, and "specific day" falling
+    back to "by year".
+
+  v6.1:
+  · New Photo Organizer window that archives JPG / RAW into new folders;
+  · Format mode by default (JPG / RAW folders), or brand mode that splits RAW
+    into brand subfolders such as RAW(RW2Panasonic), with five naming patterns;
+  · Folder names are editable and full paths are accepted; the destination root
+    defaults to the source folder;
+  · Optional "Copy (keep originals)" and "Include subfolders"; the plan is
+    previewed and confirmed before anything is moved;
+  · Existing files are never overwritten (numbered suffixes), and files already
+    in their destination are skipped.
+
+  v6.0:
   · Native C++/Win32 rewrite: custom-drawn rounded-card UI, light/dark themes,
-    DPI scaling, a single portable exe with no runtime dependencies;
-  · RAW suffix box reworked: editable only in "Custom" mode;
+    DPI scaling, a single portable exe with no runtime dependencies, instant
+    startup;
+  · RAW suffix box reworked: editable only in "Custom" mode; Auto-detect and
+    brand modes display suffixes read-only with a dimmed background, and
+    switching modes rescans immediately;
   · Clicking a list row scrolls the preview to that photo and highlights it.
+
+  The complete history for v5.x and earlier (v5.1 / v5.0 / v4.1 / v4.0 / v3.x …
+  / v1.0) is in the "Changelog" section of the repository README and in the
+  in-app About window.
 
 ══════════════════════════════════════════════════
