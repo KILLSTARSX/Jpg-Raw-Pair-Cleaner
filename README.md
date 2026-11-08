@@ -257,31 +257,20 @@ Other rules:
 
 ### **v6.2 — Four organization modes + visual and interaction pass**
 
-- **New: organize by photo orientation.** Landscape / portrait / square, judged from the display proportions after EXIF orientation correction. Whole-card buttons, three-folder or two-folder mode, and in two-folder mode the square destination is your choice — Start is disabled until you make it.
-- **New: organize by capture date.** Year / month / week / day / specific day, with standardized folder names `YYYY`, `YYYY-MM`, `YYYY-Www`, `YYYY-MM-DD`. Weeks are ISO 8601 and correct across year boundaries; the misleading “ISO week” jargon is gone from the UI.
-- **New: VIDEO support in format mode** — video files get their own folder, dated from the container creation time.
-- **New: category color system.** Blue for JPG / landscape, amber for RAW / portrait, soft green for square, violet for video, applied consistently to icons, labels, and bars.
-- **New: orientation hint strip** that states the photo-to-folder mapping outright, and follows your choice in two-folder mode.
-- **New: lightweight eased animations.** Dropdowns fade in over 150 ms with a small upward shift and fade out over 110 ms; buttons, cards, and the slider share the same curves. Skipped entirely when Windows “Show animations” is off.
-- **Fixed: black nubs on rounded corners** of the calendar and dropdowns — they now use true per-pixel transparency on layered windows.
-- **Fixed: empty EXIF on ARW files** — all-zero thumbnail-IFD tags no longer overwrite the main IFD, and the date falls back from original → digitized → modified.
-- **Fixed: truncated button captions at 1080p** — widths are now measured in device pixels with a safety margin.
-- **Fixed: neutral Chinese being detected as Traditional**, and “specific day” reverting to “by year” after the year mode was added.
+- **Four ways to organize**: by format (now including video), by camera brand, by photo orientation (landscape / portrait / square, judged from the display proportions after EXIF correction), and by capture date (year / month / week / day / specific day).
+- **Standardized date folders**: `YYYY`, `YYYY-MM`, `YYYY-Www`, `YYYY-MM-DD`; weeks follow ISO 8601 and stay correct across year boundaries, and the “ISO week” jargon is gone from the UI.
+- **Category colors and a hint strip**: blue for JPG / landscape, amber for RAW / portrait, green for square, violet for video, applied to icons, labels, and bars; the orientation cards state the photo-to-folder mapping outright and follow your choice in two-folder mode.
+- **Lightweight eased animations**: dropdowns fade in over 150 ms with a small upward shift and out over 110 ms; buttons, cards, and the slider share the same curves, and everything is skipped when Windows “Show animations” is off.
+- **Fixed**: empty EXIF on ARW files, truncated button captions at 1080p, black nubs on the calendar and dropdown corners, and neutral Chinese being detected as Traditional.
 
 ### **v6.1 — Photo Organization + Pair Comparison Improvements**
 
-- **New: Photo Organizer** — organize JPG and RAW files into separate destinations, or sort RAW files into camera-brand/extension subfolders.
-- **New: Two organization modes** — organize by format (JPG / RAW) or by camera brand. Brand mode offers five RAW folder-naming patterns, including extension + brand, extension only, brand in parentheses, brand only, and suffix-only folder names.
-- **New: Configurable destinations** — source folder defaults to the main window's selected folder; destination root defaults to the source folder. JPG/RAW folder names can be customized, or replaced with full paths.
-- **New: Move or copy** — moving is the default; Copy mode preserves the original files. Optional recursive organization includes subfolders.
-- **New: Automatic visual plan preview** — live summary of file count, total size, and destination-folder count, followed by a card for each destination with its path, file breakdown, sample filenames, and size. The preview updates automatically and does not modify files.
-- **New: Confirmation and result summary** — review the planned folders and file count before execution; afterward, see moved/copied totals and any individual failures.
-- **Safety: Collision handling** — never silently overwrites a different file; conflicting names receive a numbered suffix. Files already in their destination are skipped, and destination folders nested under the source are excluded from scanning. Shared `.DNG` files are grouped under `RAW(DNG)` in brand mode.
-- **Optimized: Comparison sorting** — all five text columns (JPG, RAW, folder, status, and action) can be sorted in either direction. The default status order is Missing RAW → Missing JPG → Complete.
-- **New: Clickable status filters** — select Complete, Missing RAW, or Missing JPG from the legend to filter the comparison list; click again to clear the filter.
-- **Improved: First-launch language detection** — Simplified Chinese system locales map to Simplified Chinese; Traditional Chinese locales, including Taiwan, Hong Kong, and Macau, map to Traditional Chinese. Unsupported languages fall back to English, and the detected choice is saved.
-- **Fixed: About-window flicker** — buffered drawing removes visual flicker when hovering over links.
-- **Fixed: Organizer preview spacing** — removed the unnecessary divider and adjusted the spacing between the summary area and folder cards.
+- **New Photo Organizer window** that files JPG and RAW into separate destinations, either by format (JPG / RAW) or by camera brand, with five RAW subfolder-naming patterns in brand mode.
+- **Configurable destinations**: the source defaults to the folder selected in the main window and the destination root to the source folder; each category folder can be renamed or given a full path.
+- **Move or copy**: moving by default, with a copy mode that keeps the originals and an option to include subfolders.
+- **Live plan preview** that totals file count, size, and destination folders and lists each folder's path, breakdown, and sample names, followed by a confirmation step and a success/failure summary.
+- **Safety**: name collisions get a numbered suffix instead of overwriting, files already in place are skipped, and destination folders nested under the source are excluded from the scan.
+- **Comparison improvements**: all five columns sort in both directions, the default order is missing RAW → missing JPG → complete, and the status legend doubles as a filter.
 
 ### **v6.0 — Native C++ Rewrite + RAW Thumbnail Preview**
 
