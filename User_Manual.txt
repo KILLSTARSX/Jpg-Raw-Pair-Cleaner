@@ -1,11 +1,27 @@
 ══════════════════════════════════════════════════
         JPG-RAW_OrphanCleaner - User Manual
-        (v6.0 · Author: KILL-STAR SX)
+        (v6.2 · Author: KILL-STAR SX)
 ══════════════════════════════════════════════════
 
 【Copyright】
   Copyright (C) 2026 KILL-STAR SX. All rights reserved.
   Author: KILL-STAR SX
+  License: Apache License 2.0
+  Additional requests: ADDITIONAL-TERMS.md (not license conditions)
+  Project: https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner
+  GitHub: https://github.com/KILLSTARSX
+  bilibili: https://space.bilibili.com/381623593
+
+【License notice】
+  This software is open source under the Apache License 2.0. You may use, modify,
+  redistribute and commercialize it, including in closed-source products,
+  provided you retain the copyright, LICENSE, NOTICE and attribution, state
+  changes, and preserve Apache 2.0's patent grant and patent-litigation
+  termination terms. The author additionally requests advance notice for
+  derivatives, a revenue-sharing discussion before charging, no patenting of the
+  original parts, and no illegal use; these are recorded in ADDITIONAL-TERMS.md
+  and are not license conditions. They do not override Apache 2.0; a separate
+  written agreement is required to make them binding.
 
 【What does this software do?】
 When your camera shoots "JPG + RAW" dual format, each photo is saved as two
@@ -13,173 +29,254 @@ files. After culling, the folder often ends up with "orphan" files:
   · JPG without RAW  ->  orphan JPG
   · RAW without JPG  ->  orphan RAW
 This tool finds those orphans automatically and, after your confirmation,
-moves them to the Windows Recycle Bin. Deleted files can be restored from
-the Recycle Bin, so there is no risk of losing them.
+moves them to the Windows Recycle Bin, so nothing is lost permanently.
+
+It also includes a separate Photo Organizer that files photos away by format,
+camera brand, photo orientation, or capture date. The organizer never deletes
+anything; it only moves or copies files.
 
 【Requirements】
   · Windows 10 / 11. The exe runs directly - no installation needed.
-  · v6.0 is a native C++/Win32 program: zero runtime dependencies, a single
-    exe of only ~620 KB, instant startup, and full high-DPI scaling support.
+  · Native C++/Win32 program: zero runtime dependencies, one portable exe,
+    instant startup, full high-DPI scaling support.
   · Rebuilding from source: run build.ps1 inside the cpp\ folder (a w64devkit
     compiler is bundled - no dev environment needed). The legacy Python source
     is still included and needs Python 3.10+ with Pillow.
+
+【Digital signature certificate (one-time, optional but recommended)】
+  The exe is code-signed with the author's self-signed certificate
+  (KILL-STAR SX). Windows does not trust self-signed certificates by default,
+  so without installing it the app still runs, but Windows may show "Unknown
+  publisher" and SmartScreen may say "Windows protected your PC".
+  · Recommended: unzip 证书.7z and double-click 安装证书.bat.
+    The script first checks whether the certificate is already installed:
+        · not installed  ->  type Y to install, N to cancel
+        · already there  ->  type Y to reinstall, U to uninstall, N to quit
+    If a "Security Warning" (or "Root Certificate Store" when uninstalling)
+    appears, check the issuer is "KILL-STAR SX Root CA" and choose Yes.
+    A green "安装成功" means it worked. Only those keywords are colored; the
+    window background stays normal.
+  · Manual install: double-click KILL-STAR SX Root CA.cer -> Install
+    Certificate -> Current User -> Place all certificates in the following
+    store -> Browse -> Trusted Root Certification Authorities -> Finish.
+  · Only this one certificate is needed, and later app updates do not require
+    reinstalling it (the same certificate is valid until 2036-10-02).
+  · Verify: right-click the exe -> Properties -> Digital Signatures; the signer
+    should read "KILL-STAR SX".
+  · If installation fails, only the words "安装失败" turn red and a feedback
+    address is shown; you can also right-click 安装证书.bat and choose
+    "Run as administrator".
+  · Note: installing the certificate only tells Windows who the publisher is.
+    It does not guarantee your antivirus will stop flagging the app; if that
+    happens with a false positive, whitelist it or report it to the vendor.
 
 【Quick start (3 steps)】
   1. Click "Browse..." and pick a photo folder - scanning starts automatically.
   2. Check the orphan list (or the pair-comparison view) and uncheck anything
      you want to keep.
   3. Click Delete, then the round "Delete" button in the confirm window - done.
+  (Only want to file JPG and RAW apart without deleting anything? Click
+  "Organize" in the app bar - see the next section.)
+
+【Photo Organizer (v6.1, four modes in v6.2)】
+  A separate window opened from the "Organize" button in the app bar. It does
+  NOT pair, clean, or delete anything: it only moves or copies JPG / RAW /
+  video files into folders you define.
+
+  Four ways to organize:
+    ① By format (default)
+       JPG -> JPG folder, RAW -> RAW folder, video -> VIDEO folder.
+    ② By camera brand
+       RAW is split further by brand and extension, e.g. RAW(RW2Panasonic);
+       video still gets its own folder.
+    ③ By photo orientation
+       Landscape / portrait / square, into three folders or two.
+    ④ By capture date
+       Year / month / week / day, or one specific day.
+
+  Common options:
+  · Source folder - defaults to the folder currently open in the main window.
+  · Destination root - where the new category folders are created. Leave it
+    empty to create them inside the source folder, or pick another location.
+  · JPG / RAW / VIDEO destination - rename the folder, or type a full path to
+    send one category somewhere else entirely.
+  · RAW folder naming (brand mode only) - five patterns: extension + brand
+    (default, RAW(RW2Panasonic)), extension only (RAW(RW2)), brand in
+    parentheses (RAW(Panasonic)), brand only (Panasonic), extension only (RW2).
+    The example next to the option updates live. Brand names follow the UI
+    language, so German UI produces German brand names.
+  · Copy (keep originals) - off by default (files are moved).
+  · Include subfolders - off by default; turn on to process subfolders too.
+
+  Orientation mode in detail:
+  · The decision uses the PROPORTIONS AFTER EXIF ORIENTATION IS APPLIED, not
+    the raw pixel order - a 4:3 photo shot vertically is not treated as
+    landscape.
+  · Three folders: Landscape + Portrait + Square.
+  · Two folders: only Landscape + Portrait. Square photos go into whichever one
+    you click on the two shape cards; "Start Organizing" stays DISABLED until
+    you choose, and the app never decides for you.
+  · The three shapes are drawn at fixed ratios (3:2 landscape, 2:3 portrait,
+    1:1 square) with the caption below the shape, so the portrait silhouette
+    can never be squashed into a square just to fit text.
+  · A hint strip under the cards spells out the mapping, e.g.
+    "Landscape photos -> Landscape folder"; in two-folder mode the square entry
+    follows your choice and shows a warning color until you pick one.
+
+  Date mode in detail:
+  · Folder names: YYYY (2026), YYYY-MM (2026-11), YYYY-Www (2026-W45),
+    YYYY-MM-DD (2026-11-04). "Specific day" only organizes that one day and
+    leaves everything else where it is.
+  · Weeks use ISO 8601: Monday is the first day, week 1 contains January 4, and
+    dates near a year boundary belong to their ISO week-year - 2027-01-01 goes
+    to 2026-W53 and 2024-12-30 goes to 2025-W01. The app has only this one week
+    algorithm, and a one-line note appears under the option when it is selected.
+  · Dates are read in the existing priority order: photo EXIF -> video
+    container creation time (MP4 / MOV / MKV headers, AVI ICRD, UTC converted
+    to local) -> file timestamp. Files without a readable date can either go to
+    a separate "unknown date" folder or be skipped; the preview marks the source.
+
+  Preview and workflow (no separate Preview button - it is always live):
+  1. Choose the options. The preview recalculates as you change source,
+     destination, mode, naming, or any other setting.
+  2. Review the plan. The summary shows total files, total size and folder
+     count; each destination gets a card with its path, file count, size,
+     JPG/RAW/VIDEO breakdown, sample filenames and a proportion bar.
+     Previewing only reads file information.
+  3. Click "Start Organizing" and check the confirmation summary (folders to be
+     created, files to be processed) before continuing.
+  4. Read the result card: how many files were moved or copied, and every
+     failure with its reason. Returning to the main window rescans automatically.
+
+  Safeguards:
+  · No silent overwrite: an existing different file with the same name gets a
+    numbered suffix, e.g. IMG_0001 (1).JPG.
+  · Files already in their intended destination are skipped, so re-running the
+    same task is safe.
+  · A destination nested inside the source is excluded from the scan, so files
+    that were just organized are not picked up again.
+  · .DNG is shared by several brands and is grouped as RAW(DNG) in brand mode.
+  · One failed file never aborts the batch; each failure is reported.
 
 【Two interfaces (your choice)】
   The "View" drop-down in the top bar switches between two layouts; the choice
   is remembered:
-  · Classic list - shows only the orphan files that would be processed
-    (the v5.0 layout, unchanged).
+  · Classic list - shows only the orphan files that would be processed.
   · Pair compare - shows the JPG and its same-named RAW SIDE BY SIDE on one
     row so the missing side is obvious at a glance:
-      - both present  -> row marked GREEN  (complete, nothing to do; row cannot
-        be checked)
+      - both present  -> row marked GREEN  (complete, row cannot be checked)
       - JPG missing   -> row marked YELLOW (RAW only, the RAW is an orphan)
       - RAW missing   -> row marked RED    (JPG only, the JPG is an orphan)
     Columns: Delete | JPG file (left) | RAW file (right) | Folder | Status |
-    Action. The missing side is simply left blank (no dash placeholder).
-    The "Action" column states plainly whether the row WILL be deleted, so a
-    fully-listed table is never ambiguous:
-      - Delete                     -> the file is an orphan and checked; it will
-                                      be moved to the Recycle Bin
+    Action. The missing side is left blank (no dash placeholder).
+    The "Action" column states plainly whether the row WILL be deleted:
+      - Delete                     -> orphan and checked; goes to the bin
       - Keep - unchecked           -> you unchecked it, so it stays
       - Keep - paired              -> both sides exist, nothing to do
-      - Keep - format not matched  -> the RAW extension is outside the selected
-                                      brand/filter and is protected
+      - Keep - format not matched  -> RAW extension outside the selected
+                                      brand/filter and therefore protected
     Example: with 5 candidate photos, switching the brand to "Panasonic" leaves
     only 2 participating pairs. The classic list shows just those 2, while the
     pair view still lists everything and marks the rest as
     "Keep - format not matched".
     Two switches at the top right:
-      - "Mark by background" (default ON): the whole row background is coloured
-        while the font colour stays the same as the theme; turn it off to colour
-        the TEXT instead and keep the background unchanged.
+      - "Mark by background" (default ON): the row background is colored while
+        the font color stays the theme color; turn it off to color the TEXT.
       - "Only missing": hide complete pairs and show only problem rows.
-    Click a column header to sort by JPG file / RAW file / Status / Action
-    (click again to reverse). Column widths adapt to the window so all six
-    columns stay visible; each column also has a minimum width equal to its
-    header text, so dragging a column as narrow as possible never covers or
-    cuts off the header text above (true for both the classic and pair views). A legend shows live counts, e.g. "Total 10 pairs: complete 2 ·
-    missing RAW 3 · missing JPG 5".
+    Click a column header to sort by JPG file / RAW file / Folder / Status /
+    Action (click again to reverse; ▲/▼ shows the direction). Default order is
+    Missing RAW -> Missing JPG -> Complete. The status legend at the top is
+    clickable: click "Complete", "Missing RAW" or "Missing JPG" to filter, and
+    click the same entry again to clear it. The legend shows live counts.
+    Column widths adapt to the window so all six columns stay visible, and each
+    column has a minimum width equal to its header text.
     Checkboxes, delete counts, EXIF, preview linkage, reveal-in-Explorer and
     select-all behave identically in both interfaces.
 
-【Interface】(v6.0 modern rounded-card layout, light/dark theme, DPI scaling)
-  Top bar: app name on the left; theme, language switch and "About" on the right.
+【Interface】(modern rounded-card layout, light/dark theme, DPI scaling)
+  Top bar: app name on the left; theme, language switch, "Organize" and "About"
+  on the right.
   · Theme: the button shows the CURRENT theme (Light / Dark); clicking switches
-    to the other one. Default follows the system. All buttons, drop-downs, cards,
-    scrollbars and the slider use rounded / pill shapes.
-  · Drop-downs (camera brand / scan scope / language) are custom-drawn: the
-    selected value appears immediately, with no "blank until you click
-    elsewhere" glitch.
+    to the other one. Default follows the system. All buttons, drop-downs,
+    cards, scrollbars and the slider use rounded / pill shapes.
+  · Drop-downs (camera brand / scan scope / language / date options) are
+    custom-drawn: the selected value appears immediately. They fade in over
+    150 ms with a small upward shift and fade out over 110 ms - a transition,
+    not a delay: keyboard and mouse input are handled immediately.
+    Animated cards, buttons and the slider use the same easing curves; when
+    Windows "Show animations" is turned off, all of them switch instantly.
   · Language: 10 languages (English / 简体中文 / 繁體中文 / 日本語 / 한국어 /
     Français / Deutsch / Español / Русский / Português). On first launch the
-    system language is detected automatically (Chinese systems use Simplified
-    or Traditional); afterwards your own choice is remembered. The label shows
-    "Language" in Chinese UI and "语言" otherwise, so users of any language can
-    find it. Switching applies instantly - no restart needed.
+    system UI language is detected automatically; afterwards your own choice
+    wins and is remembered. Switching applies instantly - no restart needed.
   ① Target folder: rounded input box + "Browse..." button. Browsing starts
      scanning automatically.
   ② RAW format ("Camera Brand" dropdown, label on the same row):
-     - Auto-detect (default): the app detects the RAW formats actually present
-       in the folder. Easiest option. After a scan the suffix box shows the
-       suffixes it actually FOUND (e.g. .RW2 .NEF), so you can confirm at a
-       glance that the right formats were picked up.
+     - Auto-detect (default): detects the RAW formats actually present in the
+       folder. After a scan the suffix box shows the suffixes it FOUND, so you
+       can confirm the right formats were picked up.
      - Pick a brand: the suffix box fills in that brand's suffixes
        (e.g. Sony -> .ARW .SR2 .SRF).
-     - Custom: choose this to specify formats yourself. Type suffixes in the
-       box, separated by commas (semicolons or spaces work too), e.g. .rw2,.dng;
-       the leading dot is optional (rw2 works as well). If you leave it empty
-       and click Scan, every known RAW suffix is used and the status bar says so.
-     - When you can type in the box (v6.0): only in "Custom" mode - then the
-       box has a brighter background and clear text. With Auto-detect or a
-       brand selected the background darkens and the text greys out: the box
-       is for SHOWING suffixes only (what auto-detect found, or the brand's
-       list), not for typing. The old "RAW suffix cannot be empty" popup is gone.
-     - Switching modes (v6.0): once a folder has been scanned, switching to
-       Auto-detect or another brand re-scans immediately and refreshes the
+     - Custom: type suffixes in the box, separated by commas (semicolons or
+       spaces work too), e.g. .rw2,.dng; the leading dot is optional. If you
+       leave it empty and click Scan, every known RAW suffix is used and the
+       status bar says so.
+     - The box is editable only in "Custom" mode; in Auto-detect / brand mode
+       it has a darker background and grey text because it only DISPLAYS
+       suffixes.
+     - Switching modes after a scan re-scans immediately and refreshes the
        suffix box and the list; "Custom" waits until you type and click Scan.
-     - Protection: if the selected format does not match what is actually in
-       the folder, the status bar warns you and those RAW files are NOT listed
-       as orphans (prevents accidental deletion).
-  ③ Scan scope: current folder only (default) / 1st-level subfolders /
-     2nd-level subfolders / all subfolders.
+     - Protection: if the selected format does not match what is in the folder,
+       the status bar warns you and those RAW files are NOT listed as orphans.
+  ③ Scan scope: current folder only (default) / 1st-level / 2nd-level / all.
   ④ Delete mode: orphan JPG only / orphan RAW only / all orphans.
-  ⑤ Orphan list: a checkbox column first, then name, type, size, folder.
-     - Click a column header to sort; double-click a row to reveal the file in
-       File Explorer; single-click a row to view its EXIF;
-     - Clicking a row also scrolls the preview to that thumbnail and
-       highlights it (list <-> preview linked navigation).
-  ⑥ Checkboxes (delete / keep) - new in this version:
-     - All files are CHECKED by default, which means "will be deleted";
-     - Uncheck the photos you want to keep (☑ -> ☐) by clicking:
-       the checkbox in the list, the badge in the top-right of a thumbnail,
-       or by pressing Space with rows selected;
-     - A single "All / None" pill button sits in the "Orphan Files" card header
-       (same row as the list title) and toggles between select-all and
-       select-none automatically;
-     - Unchecked rows look dimmer; the thumbnail badge becomes an empty box.
-     - The badge is intentionally minimal: a rounded box with a check inside
-       (just the empty box when unchecked). Box and check are white with a thin
-       dark outline, so they stay readable on both bright and dark photos and
-       never cover the image.
-     - JPG and RAW thumbnails use the EXACT same badge style, so the check state
-       is obvious at a glance;
+  ⑤ Orphan list: checkbox column first, then name, type, size, folder.
+     Click a header to sort; double-click a row to reveal the file in Explorer;
+     single-click a row to view its EXIF and to scroll the preview to that
+     thumbnail and highlight it.
+  ⑥ Checkboxes (delete / keep):
+     - All files are CHECKED by default, meaning "will be deleted";
+     - Uncheck the photos you want to keep by clicking the list checkbox, the
+       thumbnail badge, or by pressing Space with rows selected;
+     - An "All / None" pill button in the card header toggles select-all /
+       select-none;
+     - Unchecked rows look dimmer; the badge becomes an empty box;
      - The Delete button counts and sizes ONLY the checked files;
      - The confirm window also reports "Excluded (kept): N file(s)";
      - Your check state is remembered for the next scan of the same files.
   ⑦ Photo preview: shows the files that will be deleted.
      - Slider adjusts thumbnail size: Small 120 / Medium 200 / Large 320 px.
-     - Single-click a thumbnail to view EXIF; double-click to reveal in File
-       Explorer.
+       The knob is a true circle at every size and animates smoothly; while you
+       drag it, it follows the pointer exactly.
+     - Header row 1: "Photo Preview" title on the left, "Detailed EXIF" button
+       on the right. Header row 2: size label + slider + current value, with
+       the one-line EXIF summary on the same row, so the two sides of the card
+       share one height and no blank band is wasted.
      - Brief EXIF (default): one compact line
-       Camera | f-stop | Shutter | ISO | Focal length | Resolution
-       (e.g. Sony A7M4 | f1.8 | 1/200 | ISO100 | 50mm | 6000x4000).
-     - Detailed EXIF: click the "Detailed EXIF" button. Fixed 9 fields - Make,
-       Model, Aperture, Shutter, ISO, Focal length, Date taken, Resolution,
-       Lens. Missing fields show "--"; JPG and RAW look identical. The EXIF text
-       occupies its own full-width row, right-aligned and indented, so it can
-       never be hidden by the button (it used to be squeezed away in narrow
-       windows - fixed).
+       Camera | f-stop | Shutter | ISO | Focal length | Resolution.
+     - Detailed EXIF: fixed 9 fields - Make, Model, Aperture, Shutter, ISO,
+       Focal length, Date taken, Resolution, Lens. Missing fields show "--".
      - Copy EXIF: double-click the EXIF area, or use the right-click menu.
-     - RAW files support EXIF too (embedded TIFF parsing; a few formats such
-       as X3F cannot be read).
+     - RAW files support EXIF too (embedded TIFF parsing; a few formats such as
+       X3F cannot be read). ARW files are parsed from the file's own TIFF header,
+       so all-zero tags in the thumbnail IFD no longer blank out make/model/date.
      - The preview scrolls back to the top when you switch folders.
-     - Scrollbars and the thumbnail-size slider are custom-drawn: the scrollbar
-       thumb is a ROUNDED RECTANGLE (semicircular ends, not an ellipse) with a
-       very light track; hover to darken, drag it, click the track to page, and
-       the mouse wheel works too.
-     - List (vertical + horizontal), preview and result areas all share exactly
-       the same scrollbar style.
-     - When list content (e.g. a long folder path) is wider than the view, the
-       horizontal scrollbar below the list scrolls properly.
-     - The list and preview areas split the height proportionally and re-adjust
-       on every window resize; the divider can be dragged and its ratio is
-       remembered, so neither area is ever squeezed into a thin strip.
-  ⑧ Confirm before delete: checked by default - a confirmation window appears
-     before deleting.
-  ⑨ Delete button (red): shows the count and total size, e.g.
-     "Delete (7, 24.6 KB)"; becomes "Force Delete" when the RAW format is
-     unmatched (confirmation is then mandatory).
-  ⑩ Result area: log of scans and deletions (success/failure counts and
-     failure reasons).
-  ⑪ About: version, author, changelog and the "completely free and open
-     source" statement (follows the UI language). The window sizes itself to
-     its content and scrolls when the changelog is long; close it with the
-     "×" in the title bar or with Esc / Enter - you are right back in the
-     main window.
+     - Scrollbars and the slider are custom-drawn: the scrollbar thumb is a
+       rounded rectangle with semicircular ends; hover to darken, drag it, click
+       the track to page, mouse wheel works too.
+  ⑧ Confirm before delete: on by default - a confirmation window appears first.
+  ⑨ Delete button (red): shows count and total size, e.g. "Delete (7, 24.6 KB)";
+     becomes "Force Delete" when the RAW format is unmatched.
+  ⑩ Result area: log of scans and deletions (success/failure counts, reasons).
+  ⑪ About: version, author, changelog and the "completely free and open source"
+     statement (follows the UI language). Sizes itself to its content and
+     scrolls when the changelog is long; close with "×" or Esc / Enter.
 
 【Confirmation window (misclick-safe)】
-  · The confirm window has no system title bar, therefore NO "×" close button;
+  · No system title bar, therefore NO "×" close button;
   · Two round buttons: neutral "✕" (Cancel) on the left, red "✓" (Delete) on
-    the right; pressing one fills it solid for clear feedback;
-  · Esc and Enter both mean CANCEL, and focus starts on Cancel, so pressing
-    Enter never deletes by accident;
+    the right; pressing one fills it solid;
+  · Esc and Enter both mean CANCEL, and focus starts on Cancel;
   · Deleting requires an explicit mouse click on the round Delete button.
 
 【Pairing rules】
@@ -191,27 +288,25 @@ the Recycle Bin, so there is no risk of losing them.
 
 【Deleting & safety】
   · Delete = move to the Windows Recycle Bin; restorable at any time.
-  · The confirmation dialog clearly states: "Files will be moved to the
-    Recycle Bin and can be restored."
-  · When the RAW format is unmatched, a mandatory confirmation is always
-    shown, even if "Confirm before delete" is unchecked.
-  · A single failed file never interrupts the whole batch; failure reasons
-    are listed in the Result area. Locked files are retried once.
-  · After deletion the app rescans automatically and refreshes the list and
-    preview - no manual steps needed.
+  · The confirmation dialog states: "Files will be moved to the Recycle Bin and
+    can be restored."
+  · When the RAW format is unmatched, a mandatory confirmation is always shown.
+  · A single failed file never interrupts the batch; reasons are listed in the
+    Result area. Locked files are retried once.
+  · After deletion the app rescans automatically.
+  · The organizer never deletes: it moves by default, or copies when "Copy
+    (keep originals)" is on. Check the preview and summary before starting.
 
 【Settings memory】
 The app remembers: last folder, RAW format, scan scope, confirm checkbox,
-thumbnail size, window position/size, the UI LANGUAGE, the LIGHT/DARK THEME
-and your CHECK STATE (files marked as "keep"). Restored on next launch.
+thumbnail size, window position/size, the UI LANGUAGE, the LIGHT/DARK THEME,
+the interface mode and your CHECK STATE (files marked as "keep").
 Config file: %APPDATA%\相机照片筛选工具\config.json
 
 【Camera brand localization】
-Brand names follow the current UI language while keeping the English name,
-for example:
+Brand names follow the current UI language while keeping the English name:
   Simplified Chinese: 松下 Panasonic | English: Panasonic
   Japanese: パナソニック Panasonic | Russian: Никон Nikon
-  (when the local name equals the English name it is shown only once)
 Built-in brands (extensions in brackets):
   Panasonic (.RW2)  Canon (.CR3/.CR2/.CRW)  Nikon (.NEF/.NRW)
   Sony (.ARW/.SR2/.SRF)  Fujifilm (.RAF)  Olympus (.ORF)  Pentax (.PEF)
@@ -220,45 +315,64 @@ Built-in brands (extensions in brackets):
 
 【FAQ】
   1. Some files fail to delete?
-     Usually the file is open in another program (e.g. a viewer). Close it
-     and try again.
+     Usually the file is open in another program. Close it and try again.
   2. Preview area is empty?
-     Nothing would be deleted in the current mode; corrupted images are
-     skipped and counted.
+     Nothing would be deleted in the current mode; corrupted images are skipped
+     and counted.
   3. "RAW format does not match the selection"?
      Switch "Camera Brand" back to Auto-detect.
   4. No EXIF shown when I click a photo?
-     JPGs must contain EXIF data; a few RAW formats (e.g. X3F) cannot be
-     parsed and show "--".
+     JPGs must contain EXIF data; a few RAW formats (e.g. X3F) cannot be parsed.
   5. Can I get deleted files back?
-     Yes. Everything is moved to the Recycle Bin - restore from there.
+     Yes - everything is moved to the Recycle Bin.
   6. The UI language is not what I want?
-     Pick one in the language dropdown (10 languages, shown natively); the
-     choice is remembered. On first launch it follows the system language.
+     Pick one in the language dropdown; the choice is remembered. On first launch
+     it follows the system UI language.
   7. I want to keep some photos?
-     Uncheck them (list checkbox / thumbnail badge / Space key); the counts on
-     the Delete button update, and the state is remembered.
+     Uncheck them (list checkbox / thumbnail badge / Space key).
   8. The UI is too bright/dark?
-     Use the "Theme" button in the top bar (default follows the system).
-  9. The suffix box is grey and won't let me type?
-     That is by design: the box is editable only in "Custom" mode. With
-     Auto-detect or a brand selected it just DISPLAYS the suffixes and cannot
-     be edited. Switch to "Custom" to type your own.
+     Use the "Theme" button in the top bar.
+  9. Does the organizer delete anything?
+     No. It only moves or copies files between folders.
+ 10. Where do square photos go in two-folder mode?
+     Into the landscape or portrait folder you click. Until you choose,
+     "Start Organizing" stays disabled.
+ 11. Why does a week number belong to the previous year?
+     That is ISO 8601: the date belongs to its ISO week-year, which can differ
+     from the calendar year (2027-01-01 -> 2026-W53).
+ 12. My antivirus flags the app even after installing the certificate?
+     The certificate only tells Windows who published the app; it cannot
+     guarantee an antivirus verdict. If it is a false positive, whitelist the
+     app or report it to the vendor.
 
 【Troubleshooting: the app does not start】
-  · The program is code-signed, so normally a plain double-click starts it.
-  · If your PC still shows a Windows security prompt, click "More info" ->
-    "Run anyway" - it does not affect usage and does not mean anything is wrong.
+  · The program is code-signed; a plain double-click normally starts it.
+  · If Windows still shows a security prompt, click "More info" -> "Run anyway".
+  · If the certificate installer does not respond, right-click 安装证书.bat ->
+    Properties -> tick "Unblock" at the bottom -> OK, then run it again.
+  · 1080p / 2K / 4K displays and 100%-200% scaling are all supported; if text
+    looks truncated, make the window wider and check for a newer version.
 
-【Changelog】(current version highlights only; earlier versions are listed
-in the About window)
+【Changelog】(current version highlights; earlier versions are in "About")
+  v6.2 highlights:
+  · Organizer expanded to four modes: format (now with VIDEO), camera brand,
+    photo orientation (landscape/portrait/square, three or two folders), and
+    capture date (year/month/week/day/specific day, ISO 8601 weeks);
+  · New category color system (blue = JPG/landscape, amber = RAW/portrait,
+    soft green = square, violet = video) applied to icons, labels and bars;
+  · New orientation hint strip that states the photo-to-folder mapping;
+  · Lightweight animations: dropdowns fade in/out with a slight shift, cards
+    and the slider ease; all skipped when Windows animations are off;
+  · Rounded corners of the calendar and dropdowns are now truly transparent;
+  · ARW EXIF fixed (thumbnail IFD no longer overwrites the main IFD);
+  · Button captions no longer truncated at 1080p / 100% scaling.
+  v6.1 highlights:
+  · New Photo Organizer window with live preview, move/copy, subfolder support,
+    custom folder names and full paths.
   v6.0 highlights:
   · Native C++/Win32 rewrite: custom-drawn rounded-card UI, light/dark themes,
-    DPI scaling, a single ~620 KB exe with no runtime deps, instant startup;
-  · RAW suffix box reworked: "Custom" lets you type suffixes, Auto-detect /
-    brand modes show them read-only (what was found / the brand's list),
-    a locked box gets a darker background with grey text, and switching
-    modes re-scans immediately;
+    DPI scaling, a single portable exe with no runtime dependencies;
+  · RAW suffix box reworked: editable only in "Custom" mode;
   · Clicking a list row scrolls the preview to that photo and highlights it.
 
 ══════════════════════════════════════════════════
