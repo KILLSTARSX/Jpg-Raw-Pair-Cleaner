@@ -397,17 +397,9 @@ The app stays free and non-commercial. The principle hasn’t changed: **feature
 
 ---
 
-## ⭐ If this project helped, a star is appreciated!
+## ⭐ If It Helped, a Star Is Appreciated!
 
-<details>
-<summary>Click to support the author (buy me a coffee ☕)</summary>
-
-<br>
-
-<img src="assets/wechat-sponsor.jpg" alt="WeChat sponsor QR code" width="240">
-
-WeChat sponsor QR code
-</details>
+Sponsorship: [Ko-fi](https://ko-fi.com/killstarsx)
 
 [![Star History](https://img.shields.io/github/stars/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/stargazers)
 [![Fork](https://img.shields.io/github/forks/KILLSTARSX/Jpg-Raw-Pair-Cleaner?style=social)](https://github.com/KILLSTARSX/Jpg-Raw-Pair-Cleaner/forks)
